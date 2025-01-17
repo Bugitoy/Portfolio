@@ -1,41 +1,41 @@
-import Section from "./Section";
-import Heading from "./Heading";
-import { service1, service2, service3, check } from "../assets";
-import { brainwaveServices, brainwaveServicesIcons } from "../constants";
+import Section from "../Section";
+import Heading from "../Heading";
+import { service1, service2, service3, check } from "../../assets";
+import { brainwaveServices, brainwaveServicesIcons } from "../../constants";
 import {
   PhotoChatMessage,
   Gradient,
   VideoBar,
   VideoChatMessage,
-} from "./design/Services";
+} from "../design/Services";
 
-import Generating from "./Generating";
+import Generating from "../Generating";
 
 const Services = () => {
   return (
     <Section id="how-to-use">
       <div className="container">
         <Heading
-          title="Generative AI made for creators."
-          text="Brainwave unlocks the potential of AI-powered applications"
+          title="My most mermorable moments"
+          text="Here are some images of my favourite moments from the past."
         />
 
         <div className="relative">
           <div className="relative z-1 flex items-center h-[39rem] mb-5 p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]">
-            <div className="absolute top-0 left-0 w-full h-full pointer-events-none md:w-3/5 xl:w-auto">
+            <div className="absolute top-0 left-[8rem] md:left-[3rem] w-full h-full pointer-events-none md:w-3/5 xl:w-auto hidden md:block lg:block xl:block">
               <img
-                className="w-full h-full object-cover md:object-right"
+                className="w-3/5 h-full md:object-right"
                 width={800}
-                alt="Smartest AI"
+                alt="Coding"
                 height={730}
                 src={service1}
               />
             </div>
 
-            <div className="relative z-1 max-w-[17rem] ml-auto">
-              <h4 className="h4 mb-4">Smartest AI</h4>
-              <p className="body-2 mb-[3rem] text-n-3">
-                Brainwave unlocks the potential of AI-powered applications
+            <div className="relative z-1 md: mr-[1.5rem] max-w-[19rem] ml-auto md: mt-[0rem]">
+              <h4 className="h4 mb-4 sm: mt-[-2.5rem]">Placing 2nd on my first hackathon</h4>
+              <p className="body-2 md:mb-[2rem] mb-[3rem] text-n-3">
+                On March 20, 2024, I participated in Bothohacks where my team consisting of 3 other programmers to place 2nd.
               </p>
               <ul className="body-2">
                 {brainwaveServices.map((item, index) => (
@@ -50,40 +50,38 @@ const Services = () => {
               </ul>
             </div>
 
-            <Generating className="absolute left-4 right-4 bottom-4 border-n-1/10 border lg:left-1/2 lg-right-auto lg:bottom-8 lg:-translate-x-1/2" />
+            <Generating className="absolute left-4 right-4 bottom-7 border-n-1/10 border lg:left-1/2 lg-right-auto lg:bottom-8 lg:-translate-x-1/2" />
           </div>
 
           <div className="relative z-1 grid gap-5 lg:grid-cols-2">
             <div className="relative min-h-[39rem] border border-n-1/10 rounded-3xl overflow-hidden">
-              <div className="absolute inset-0">
+              <div className="absolute inset-9 mb-[-3rem]">
                 <img
                   src={service2}
-                  className="h-full w-full object-cover"
+                  className="h-1/2 w-full ml-[0rem] rounded-[2rem]"
                   width={630}
                   height={750}
-                  alt="robot"
+                  alt="man serving a tennis ball"
                 />
               </div>
 
               <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
-                <h4 className="h4 mb-4">Photo editing</h4>
+                <h4 className="h4 mb-4">Recieving the Legae Academy Sports Standard Award</h4>
                 <p className="body-2 mb-[3rem] text-n-3">
-                  Automatically enhance your photos using our AI app&apos;s
-                  photo editing feature. Try it now!
+                  Awarded by my high school for winning a Gold Medal in Singles and Silver 
+                  Medal in Doubles and at the 2019 ISSSA Tennis Championships.
                 </p>
               </div>
-
               <PhotoChatMessage />
             </div>
 
-            <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]">
+            <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[40rem]">
               <div className="py-12 px-4 xl:px-8">
-                <h4 className="h4 mb-4">Video generation</h4>
+                <h4 className="h4 mb-4">Making my first website</h4>
                 <p className="body-2 mb-[2rem] text-n-3">
-                  The world’s most powerful AI photo and video art generation
-                  engine. What will you create?
+                  On November 2023, I coded a personal Website displaying my achievements and accolades.
+                  Tools used: HTML, CSS, and JavaScript. Link to website:
                 </p>
-
                 <ul className="flex items-center justify-between">
                   {brainwaveServicesIcons.map((item, index) => (
                     <li
@@ -116,6 +114,7 @@ const Services = () => {
                   height={400}
                   alt="Scary robot"
                 />
+
 
                 <VideoChatMessage />
                 <VideoBar />

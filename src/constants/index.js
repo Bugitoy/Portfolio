@@ -1,4 +1,9 @@
 import {
+  cpluspluslogo,
+  javascriptlogo,
+  typescriptlogo,
+  reactjslogo,
+  nodejslogo,
   benefitIcon1,
   benefitIcon2,
   benefitIcon3,
@@ -39,34 +44,36 @@ import {
 export const navigation = [
   {
     id: "0",
-    title: "Features",
-    url: "#features",
+    title: "About Me",
+    url: "/about",
   },
   {
     id: "1",
-    title: "Pricing",
-    url: "#pricing",
+    title: "Projects",
+    url: "/projects",
   },
   {
     id: "2",
-    title: "How to use",
-    url: "#how-to-use",
+    title: "Blog",
+    url: "/blog",
   },
   {
     id: "3",
     title: "Roadmap",
-    url: "#roadmap",
+    url: "/roadmap",
   },
+  /*
   {
     id: "4",
     title: "New account",
     url: "#signup",
     onlyMobile: true,
   },
+  */
   {
     id: "5",
-    title: "Sign in",
-    url: "#login",
+    title: "Contact Me",
+    url: "#contact",
     onlyMobile: true,
   },
 ];
@@ -75,12 +82,12 @@ export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
 
 export const notificationImages = [notification4, notification3, notification2];
 
-export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
+export const companyLogos = [nodejslogo, reactjslogo, typescriptlogo, javascriptlogo, cpluspluslogo];
 
 export const brainwaveServices = [
-  "Photo generating",
-  "Photo enhance",
-  "Seamless Integration",
+  "Received an Award of $300",
+  "Networked with others",
+  "Tools used: Arduino Uno R3, HTML, CSS, Javascript",
 ];
 
 export const brainwaveServicesIcons = [
@@ -94,55 +101,57 @@ export const brainwaveServicesIcons = [
 export const roadmap = [
   {
     id: "0",
-    title: "Voice recognition",
-    text: "Enable the chatbot to understand and respond to voice commands, making it easier for users to interact with the app hands-free.",
-    date: "May 2023",
-    status: "done",
+    title: "AI and Machine Learning",
+    text: "I'm continously deepening my knowledge on AI, learning higher level mathematics, generative models, and many more.",
+    date: "January",
+    status: "Done",
     imageUrl: roadmap1,
     colorful: true,
   },
   {
     id: "1",
-    title: "Gamification",
-    text: "Add game-like elements, such as badges or leaderboards, to incentivize users to engage with the chatbot more frequently.",
-    date: "May 2023",
+    title: "Computer Graphics",
+    text: "Learn 3D modeling, rendering, shaders, OpenGL, DirectX, Vulkan, game engines, optimization, and algorithms.",
+    date: "February",
     status: "progress",
     imageUrl: roadmap2,
   },
   {
     id: "2",
-    title: "Chatbot customization",
-    text: "Allow users to customize the chatbot's appearance and behavior, making it more engaging and fun to interact with.",
-    date: "May 2023",
+    title: "Electric Circuits",
+    text: "I've been learning about circuits, digital design, GPU architecture, parallel computing, VLSI, and embedded systems to master hardware.",
+    date: "March",
     status: "done",
     imageUrl: roadmap3,
   },
   {
     id: "3",
-    title: "Integration with APIs",
-    text: "Allow the chatbot to access external data sources, such as weather APIs or news APIs, to provide more relevant recommendations.",
-    date: "May 2023",
+    title: "Politics, History and Articles",
+    text: "I've been trying to expand my world view, reading about the past, analysing past empires and broadening my knowledge.",
+    date: " April",
     status: "progress",
     imageUrl: roadmap4,
   },
 ];
 
+export const topText = "Success isn’t just about reaching goals; it’s about creating opportunities, embracing challenges, and continuously evolving. The journey is just as important as the destination, and I’m just getting started.";
+
 export const collabText =
-  "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.";
+  "Recognized as a National Top Achiever by the Government of Botswana for outstanding academic excellence in the 2021 International General Certificate of Secondary Education (IGCSE) exams, earning 6 As and 2 As.";
 
 export const collabContent = [
   {
     id: "0",
-    title: "Seamless Integration",
+    title: "National Top Achiever",
     text: collabText,
   },
   {
     id: "1",
-    title: "Smart Automation",
+    title: "Over 18 medals earned in prestigious BTA & ISSSA tennis tournaments",
   },
   {
     id: "2",
-    title: "Top-notch Security",
+    title: "Awarded the Legae Academy Full Color Academic Standard for stellar grades",
   },
 ];
 
@@ -208,35 +217,36 @@ export const collabApps = [
 export const pricing = [
   {
     id: "0",
-    title: "Basic",
-    description: "AI chatbot, personalized recommendations",
-    price: "0",
+    title: "Tennis",
+    description: "Captain of the Legae Academy Tennis Team",
+    price: "Sports",
     features: [
-      "An AI chatbot that can understand your queries",
-      "Personalized recommendations based on your preferences",
-      "Ability to explore the app and its features without any cost",
+      "ISSSA Tennis Doubles Championships, 2023 - Gold Medal",
+      "Serowe Open, 2019 - Gold Medal",
+      "Francistown Junior Open, 2019 - Gold Medal",
+      "Schools Tennis Cup, 2023 - Silver Medal ",
     ],
   },
   {
     id: "1",
-    title: "Premium",
-    description: "Advanced AI chatbot, priority support, analytics dashboard",
-    price: "9.99",
+    title: "Karate",
+    description: "Black belt in the style of Hayashi Ha Shito Ryu Karate",
+    price: "Arts"/*null*/,
     features: [
-      "An advanced AI chatbot that can understand complex queries",
-      "An analytics dashboard to track your conversations",
-      "Priority support to solve issues quickly",
+      "Jwaneng Karate Open - Bronze Medal (Kata)",
+      "All Styles Karate Development & Elite Championships, Pretoria, South Africa - Bronze Medal (Kumite), Gold Medal (Kata), Participation Medal (Kata, Kumite",
+      "Botswana Karate Association (BOKA) National Team Selection Championship (U15) – 3rd place (Kumite)",
     ],
   },
   {
     id: "2",
-    title: "Enterprise",
-    description: "Custom AI chatbot, advanced analytics, dedicated account",
-    price: null,
+    title: "Advocates for Red Cross Commitee",
+    description: "Senior member of the Legae Academy’s Advocates for Red Cross Committee",
+    price: "Charity",
     features: [
-      "An AI chatbot that can understand your queries",
-      "Personalized recommendations based on your preferences",
-      "Ability to explore the app and its features without any cost",
+      "Painting the Tlamelong Rehabilitation Centre for disabled people in Tlokweng",
+      "Hosted a FIFA tournament to raise money and given to the Cheshire foundation",
+      "Hosted a bake sale and bought food for the disabled people using the money",
     ],
   },
 ];
@@ -244,8 +254,8 @@ export const pricing = [
 export const benefits = [
   {
     id: "0",
-    title: "Ask anything",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Further Studies",
+    text: "My goal with this website is to document my findings and weekly readings as I delve deeper into the realms of Computer Engineering and Artificial Intelligence.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
@@ -253,7 +263,7 @@ export const benefits = [
   {
     id: "1",
     title: "Improve everyday",
-    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+    text: "My goal with this website is to document my findings and weekly readings. By exploring a range of areas in my, I aim to build a habit of consistent learning, reflection, and growth.",
     backgroundUrl: "./src/assets/benefits/card-2.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
@@ -261,16 +271,16 @@ export const benefits = [
   },
   {
     id: "2",
-    title: "Connect everywhere",
-    text: "Connect with the AI chatbot from anywhere, on any device, making it more accessible and convenient.",
+    title: "Documenting",
+    text: "I aim to organize and summarize key concepts in a concise manner, drawing from a variety of resources such as textbooks, academic papers, and educational videos.",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
     iconUrl: benefitIcon3,
     imageUrl: benefitImage2,
   },
   {
     id: "3",
-    title: "Fast responding",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Sharing Insights",
+    text: "This journal-style documentation will serve as both a personal learning repository and a knowledge-sharing platform for others with similar interests.",
     backgroundUrl: "./src/assets/benefits/card-4.svg",
     iconUrl: benefitIcon4,
     imageUrl: benefitImage2,
@@ -278,16 +288,16 @@ export const benefits = [
   },
   {
     id: "4",
-    title: "Ask anything",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Collaborate",
+    text: "Any other engineers with similiar interests are always welcome to contact me to work on a project together.",
     backgroundUrl: "./src/assets/benefits/card-5.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
   },
   {
     id: "5",
-    title: "Improve everyday",
-    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+    title: "Last reason",
+    text: "By maintaining this structured journal, I hope to build a comprehensive resource that evolves with my learning journey, providing insights for myself and a reference for others.",
     backgroundUrl: "./src/assets/benefits/card-6.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,

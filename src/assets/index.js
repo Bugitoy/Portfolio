@@ -1,29 +1,38 @@
-import brainwave from "./brainwave.svg";
-import check from "./check.svg";
-import brainwaveSymbol from "./brainwave-symbol.svg";
-import brainwaveWhiteSymbol from "./brainwave-symbol-white.svg";
-import play from "./play.svg";
-import gradient from "./gradient.png";
-import smallSphere from "./4-small.png";
-import grid from "./grid.png";
-import check2 from "./check-02.svg";
-import loading1 from "./loading-01.svg";
-import yourlogo from "./yourlogo.svg";
-import homeSmile from "./home-smile.svg";
-import file02 from "./file-02.svg";
-import searchMd from "./search-md.svg";
-import plusSquare from "./plus-square.svg";
-import recording03 from "./recording-03.svg";
-import recording01 from "./recording-01.svg";
-import disc02 from "./disc-02.svg";
-import chromecast from "./chrome-cast.svg";
-import sliders04 from "./sliders-04.svg";
-import loading from "./loading.png";
-import background from "./background.jpg";
+import brainwave from "./miscellaneous/brainwave.svg";
+import whitecrown from "./miscellaneous/whitecrown.svg"
+import cpluspluslogo from "./hero/c++.svg"
+import javascriptlogo from "./hero/javascript.svg";
+import typescriptlogo from "./hero/typescript.svg";
+import lefikaword from "./miscellaneous/lefikaword.svg";
+import pixelguytalking from "./hero/pixelguytalking.png";
+import crown from "./miscellaneous/crown.svg";
+import nodejslogo from "./hero/nodejs.svg";
+import reactjslogo from "./hero/reactjs.svg";
+import check from "./miscellaneous/check.svg";
+import brainwaveSymbol from "./miscellaneous/brainwave-symbol.svg";
+import brainwaveWhiteSymbol from "./miscellaneous/brainwave-symbol-white.svg";
+import play from "./services/play.svg";
+import gradient from "./miscellaneous/gradient.png";
+import smallSphere from "./pricing/4-small.png";
+import grid from "./roadmap/grid.png";
+import check2 from "./roadmap/check-02.svg";
+import loading1 from "./roadmap/loading-01.svg";
+import yourlogo from "./hero/yourlogo.svg";
+import homeSmile from "./services/home-smile.svg";
+import file02 from "./services/file-02.svg";
+import searchMd from "./hero/search-md.svg";
+import plusSquare from "./hero/plus-square.svg";
+import recording03 from "./services/recording-03.svg";
+import recording01 from "./services/recording-01.svg";
+import disc02 from "./services/disc-02.svg";
+import chromecast from "./services/chrome-cast.svg";
+import sliders04 from "./services/sliders-04.svg";
+import loading from "./miscellaneous/loading.png";
+import background from "./hero/background.jpg";
 
 import curve from "./hero/curve.png";
 import robot from "./hero/robot.jpg";
-import heroBackground from "./hero/hero-background.jpg";
+import heroBackground from "./hero/032e05e33a8d024f942ffb7453c51314.gif";
 
 import curve1 from "./collaboration/curve-1.svg";
 import curve2 from "./collaboration/curve-2.svg";
@@ -36,9 +45,9 @@ import protopie from "./collaboration/protopie.png";
 import raindrop from "./collaboration/raindrop.png";
 import slack from "./collaboration/slack.png";
 
-import service1 from "./services/service-1.png";
-import service2 from "./services/service-2.png";
-import service3 from "./services/service-3.png";
+import service1 from "./services/coding.svg";
+import service2 from "./services/Designer (5).jpeg";
+import service3 from "./services/Pixel Art Bedroom Scene Featuring Focused Programmer At Desk.png";
 
 import lines from "./pricing/lines.svg";
 import stars from "./pricing/stars.svg";
@@ -76,6 +85,15 @@ import telegram from "./socials/telegram.svg";
 import twitter from "./socials/twitter.svg";
 
 export {
+  whitecrown,
+  crown,
+  cpluspluslogo,
+  javascriptlogo,
+  typescriptlogo,
+  reactjslogo,
+  nodejslogo,
+  pixelguytalking,
+  lefikaword,
   brainwave,
   check,
   check2,

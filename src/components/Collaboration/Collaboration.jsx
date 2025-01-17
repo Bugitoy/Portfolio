@@ -1,16 +1,17 @@
-import { brainwaveSymbol, check } from "../assets";
-import { collabApps, collabContent, collabText } from "../constants";
-import Button from "./Button";
-import Section from "./Section";
-import { LeftCurve, RightCurve } from "./design/Collaboration";
+import { crown, check } from "../../assets";
+import { collabApps, collabContent, topText } from "../../constants";
+import Button from "../Button";
+import Section from "../Section";
+import { LeftCurve, RightCurve } from "../design/Collaboration";
+
 
 const Collaboration = () => {
   return (
     <Section crosses>
-      <div className="container lg:flex">
-        <div className="max-w-[25rem]">
+      <div className="container lg:flex sm: mt-[-3rem]">
+        <div className="max-w-[25rem] md:mb-[3.5rem]">
           <h2 className="h2 mb-4 md:mb-8">
-            AI Chat App for seamless collaboration
+            The Honors That Made Me Smile!
           </h2>
 
           <ul className="max-w-[22rem] mb-10 md:mb-14">
@@ -21,29 +22,29 @@ const Collaboration = () => {
                   <h6 className="body-2 ml-5">{item.title}</h6>
                 </div>
                 {item.text && (
-                  <p className="body-2 mt-3 text-n-4">{item.text}</p>
+                  <p className="body-2 mt-3 text-n-4 ml-10">{item.text}</p>
                 )}
               </li>
             ))}
           </ul>
 
-          <Button>Try it now</Button>
+          <Button className={"sm: ml-[6.5rem]"}>Read about me</Button>
         </div>
 
-        <div className="lg:ml-auto xl:w-[38rem] mt-4">
+        <div className="lg:ml-auto xl:w-[38rem] sm: mt-[3rem] md: mt-4 lg: mt-4 xl: mt-4">
           <p className="body-2 mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
-            {collabText}
+            {topText}
           </p>
 
-          <div className="relative left-1/2 flex w-[22rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100">
+          <div className="relative left-1/2 flex w-[22rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 sm: mt-[5rem] md:scale-100">
             <div className="flex w-60 aspect-square m-auto border border-n-6 rounded-full">
               <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">
                 <div className="flex items-center justify-center w-full h-full bg-n-8 rounded-full">
                   <img
-                    src={brainwaveSymbol}
+                    src={crown}
                     width={48}
                     height={48}
-                    alt="brainwave"
+                    alt="crown"
                   />
                 </div>
               </div>

@@ -6,6 +6,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens:{
+        'ipad': '1200',
+      },
       colors: {
         color: {
           1: "#AC6AFF",
