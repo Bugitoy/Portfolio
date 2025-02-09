@@ -1,12 +1,12 @@
-import ButtonGradient from "./assets/Others/ButtonGradient";
-import Benefits from "./components/Benefits/Benefits";
-import Collaboration from "./components/Collaboration/Collaboration";
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
-import Hero from "./components/Hero/Hero";
-import Pricing from "./components/Pricing/Pricing";
-import Roadmap from "./components/Roadmap/Roadmap";
-import Services from "./components/Services/Services";
+import ButtonGradient from "./assets/App/Others/ButtonGradient";
+import Benefits from "./components/App/Benefits/Benefits";
+import Collaboration from "./components/App/Collaboration/Collaboration";
+import Footer from "./components/App/Footer/Footer";
+import Header from "./components/App/Header/Header";
+import Hero from "./components/App/Hero/Hero";
+import Pricing from "./components/App/Pricing/Pricing";
+import Roadmap from "./components/App/Roadmap/Roadmap";
+import Services from "./components/App/Services/Services";
 
 const App = () => {
   return (
@@ -21,7 +21,6 @@ const App = () => {
         <Roadmap />
         <Footer />
       </div>
-
       <ButtonGradient />
     </>
   );

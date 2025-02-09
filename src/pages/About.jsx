@@ -1,14 +1,28 @@
-import React from "react";
+import ButtonGradient from "../assets/App/Others/ButtonGradient";
+import Benefits from "../components/App/Benefits/Benefits";
+import Collaboration from "../components/App/Collaboration/Collaboration";
+import Footer from "../components/App/Footer/Footer";
+import Header from "../components/App/Header/Header";
+import Hero from "../components/About/Hero/Hero";
+import Pricing from "../components/App/Pricing/Pricing";
+import Roadmap from "../components/App/Roadmap/Roadmap";
+import Services from "../components/App/Services/Services";
+import Experience from "../components/About/Experience/Experience";
+import Features from "../components/About/Features/Features";
 
-const About = () => {
+const App = () => {
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4">About Me</h1>
-      <p className="text-lg">
-        This is the About Me page. Here you can add information about yourself.
-      </p>
-    </div>
+    <>
+      <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
+        <Header />
+        <Hero />
+        <Experience/>
+        <Features/>
+        <Footer/>
+      </div>
+      <ButtonGradient />
+    </>
   );
 };
 
-export default About;
+export default App;

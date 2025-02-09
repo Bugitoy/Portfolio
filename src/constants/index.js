@@ -39,7 +39,7 @@ import {
   telegram,
   twitter,
   yourlogo,
-} from "../assets";
+} from "../assets/App";
 
 export const navigation = [
   {
