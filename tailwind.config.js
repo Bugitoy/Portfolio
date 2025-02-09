@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       screens:{
-        'ipad': '1200',
+        'ipad': '1200px',
       },
       colors: {
         color: {
