@@ -1,13 +1,23 @@
 import React from "react";
+import Header from "../components/App/Header/Header";
+import Footer from "../components/App/Footer/Footer";
+import ButtonGradient from "../assets/App/Others/ButtonGradient";
+import Hero from "../components/Projects/Hero/Hero";
+import NotableProjects from "../components/Projects/NotableProjects/NotableProjects";
+import Card from "../components/Projects/Card/Card";
 
 const Projects = () => {
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4">Projects</h1>
-      <p className="text-lg">
-        This is the Projects page. Here you can add information about your projects.
-      </p>
-    </div>
+    <>
+      <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
+          <Header />
+          <Hero />
+          <NotableProjects/>
+          <Card/>
+          <Footer/>
+      </div>
+      <ButtonGradient />
+    </>
   );
 };
 

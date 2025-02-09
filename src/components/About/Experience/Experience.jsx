@@ -4,7 +4,7 @@ import Section from "../../Section";
 import { BackgroundCircles, BottomLine } from "../Hero/Design/HeroDesign";
 import { useRef } from "react";
 import CompanyLogos from "../../App/Hero/CompanyLogos/CompanyLogos";
-import RepeatedBlocks from "../Hero/Design/RepeatedBlocks";
+import RepeatedBlocks from "./Design/RepeatedBlocks";
 import ConnectedBlocks from "./Design/ConnectedBlocks";
 import AboutMeTabs from "../Hero/Design/AboutMeTabs";
 import Passage from "../Hero/Design/Passage";

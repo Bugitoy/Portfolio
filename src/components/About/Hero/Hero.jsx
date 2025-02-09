@@ -4,7 +4,7 @@ import Section from "../../Section";
 import { BackgroundCircles, BottomLine } from "./Design/HeroDesign";
 import { useRef } from "react";
 import CompanyLogos from "../../App/Hero/CompanyLogos/CompanyLogos";
-import RenderRepeatedBlocks from "./Design/RepeatedBlocks";
+import RenderRepeatedBlocks from "../Experience/Design/RepeatedBlocks";
 import AboutMeTabs from "./Design/AboutMeTabs";
 import Passage from "./Design/Passage";
 
@@ -20,7 +20,7 @@ const Hero = () => {
       id="hero"
     >
       <div className="container relative" ref={parallaxRef}>
-      <div className="absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:top-[-50%]">
+        <div className="absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:top-[-50%]">
           <div
             className="relative w-full h-full"
             style={{
@@ -62,7 +62,7 @@ const Hero = () => {
             An engineer with a tennis racket and a passion for soccer.
           </p>
         </div>
-        {/*<CompanyLogos className="hidden relative z-10 mt-20 lg:block" />*/}
+          {/*<CompanyLogos className="hidden relative z-10 mt-20 lg:block" />*/}
       </div>
    
     </Section>

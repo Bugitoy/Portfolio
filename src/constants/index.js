@@ -84,6 +84,30 @@ export const notificationImages = [notification4, notification3, notification2];
 
 export const companyLogos = [nodejslogo, reactjslogo, typescriptlogo, javascriptlogo, cpluspluslogo];
 
+export const programmingHub = [
+  "C++ advanced programming certificate",
+  "Javascript advanced programming certificate",
+  "c# programming certificate"
+]
+
+export const microsoftLearn = [
+  "Game development",
+  "Gathered 7 hrs 2 mins in training hours completed",
+  "Completed 9 modules"
+]
+
+export const codingX = [
+  "Know the OS Certification Course",
+  "Hack the MAC Certification Course"
+]
+
+export const freeCodeCamp=[
+  "Completed a total of 205 modules",
+  "HTML",
+  "Achieved 226 points",
+  "CSS"
+]
+
 export const brainwaveServices = [
   "Received an Award of $300",
   "Networked with others",
@@ -126,6 +150,79 @@ export const roadmap = [
   },
   {
     id: "3",
+    title: "Politics, History and Articles",
+    text: "I've been trying to expand my world view, reading about the past, analysing past empires and broadening my knowledge.",
+    date: " April",
+    status: "progress",
+    imageUrl: roadmap4,
+  },
+];
+export const PaginationTitles = [
+  {title: "AI and Machine Learning"}, 
+  {title: "Computer Graphics"}, 
+  {title: "Electric Circuits"}, 
+  {title: "Politics, History and Articles"}, 
+]
+export const PaginationList = [
+  {
+    id: "0",
+    title: "AI and Machine Learning",
+    text: "I'm continously deepening my knowledge on AI, learning higher level mathematics, generative models, and many more.",
+    date: "January",
+    status: "Done",
+    imageUrl: roadmap1,
+    colorful: true,
+  },
+  {
+    id: "1",
+    title: "Computer Graphics",
+    text: "Learn 3D modeling, rendering, shaders, OpenGL, DirectX, Vulkan, game engines, optimization, and algorithms.",
+    date: "February",
+    status: "progress",
+    imageUrl: roadmap2,
+  },
+  {
+    id: "2",
+    title: "Computer Graphics",
+    text: "Learn 3D modeling, rendering, shaders, OpenGL, DirectX, Vulkan, game engines, optimization, and algorithms.",
+    date: "February",
+    status: "progress",
+    imageUrl: roadmap2,
+  },
+  {
+    id: "3",
+    title: "Computer Graphics",
+    text: "Learn 3D modeling, rendering, shaders, OpenGL, DirectX, Vulkan, game engines, optimization, and algorithms.",
+    date: "February",
+    status: "progress",
+    imageUrl: roadmap2,
+  },
+  {
+    id: "4",
+    title: "Computer Graphics",
+    text: "Learn 3D modeling, rendering, shaders, OpenGL, DirectX, Vulkan, game engines, optimization, and algorithms.",
+    date: "February",
+    status: "progress",
+    imageUrl: roadmap2,
+  },
+  {
+    id: "5",
+    title: "Computer Graphics",
+    text: "Learn 3D modeling, rendering, shaders, OpenGL, DirectX, Vulkan, game engines, optimization, and algorithms.",
+    date: "February",
+    status: "progress",
+    imageUrl: roadmap2,
+  },
+  {
+    id: "6",
+    title: "Electric Circuits",
+    text: "I've been learning about circuits, digital design, GPU architecture, parallel computing, VLSI, and embedded systems to master hardware.",
+    date: "March",
+    status: "done",
+    imageUrl: roadmap3,
+  },
+  {
+    id: "7",
     title: "Politics, History and Articles",
     text: "I've been trying to expand my world view, reading about the past, analysing past empires and broadening my knowledge.",
     date: " April",
