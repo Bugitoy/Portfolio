@@ -8,20 +8,20 @@ import { Coding, MarioCoding, Studying, Walking } from "../../../../assets/About
 import Draggable from "react-draggable";
 
 const RenderRepeatedBlocks = () => {
-  const leftOffsets = ["10%", "-45%", "30%", "-15%"];
+  const leftOffsets = ["5%", "-5%", "10%"];
   const images = [Coding, MarioCoding, Walking];
 
   return (
     <>
       {Array.from({ length: 3 }).map((_, index) => (
         <Draggable key={index}>
-          <div className="p-[2rem] relative top-[2rem]" style={{ left: leftOffsets[index] }}>
+          <div className="p-[2rem] relative top-[2rem] md:w-[33rem]" style={{ left: leftOffsets[index] }}>
             <TopGradient />
             <div className="relative bg-n-8 rounded-[1rem]">
-              <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[524/390] rounded-t-[0.9rem] bg-conic-gradient">
+              <div className="aspect-[43/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[988/490] lg:aspect-[710/390] rounded-t-[0.9rem] bg-conic-gradient">
                 <img
                   src={images[index]}
-                  className="w-[19rem] h-[13.8rem] ml-2 scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[-4.0%] rounded-[0.9rem]"
+                  className="w-[19rem] h-[13.8rem] ml-2 scale-[1.7] translate-y-[8%] md: w-full md:ml-0 md:h-[16rem] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[0%] rounded-[0.9rem]"
                   width={630}
                   height={490}
                   alt="draggable Images"

@@ -5,7 +5,7 @@ const TabsComponent = () => {
 
   return (
     <div className="w-full p-4">
-      <div className="flex space-x-4">
+      <div className="flex space-x-0 lg:space-x-4 xl:space-x-4 text-[0.75rem] lg:text-base xl:text-base">
         <button
           className={`px-4 py-2 focus:outline-none ${
             activeTab === 0
@@ -50,8 +50,8 @@ const TabsComponent = () => {
       <div className="mt-4 flex flex-col items-center">
         {activeTab === 0 && (
           <div>
-            <h2 className="font-semibold mb-4 text-center text-purple-200">ISSSA & BISSA Tennis Awards</h2>
-            <div className="flex flex-col items-center space-y-4 w-[40rem]">
+            <h2 className="font-semibold text-[0.65rem] lg:text-base xl:text-base mb-4 text-center text-purple-200">ISSSA & BISSA Tennis Awards</h2>
+            <div className="flex flex-col items-center space-y-2 lg:space-y-4 xl:space-y-4 w-[40rem] text-[0.65rem] lg:text-base xl:text-base">
               <p>ISSSA Tennis Championships, 2018 - Bronze Medal (Under 19 Singles)</p>
               <p>ISSSA Beginners Tennis Tournament, 2018 - Silver Medal (Under 19 Singles)</p>
               <p>BISSA Tennis National team qualifiers, 2019 - 4th (Singles)</p>
@@ -64,8 +64,8 @@ const TabsComponent = () => {
               <p>ISSSA Tennis Singles Championships, 2023 - Bronze Medal (Under 19 Singles)</p>
               <p>ISSSA Tennis Doubles Championships, 2023 - Gold Medal (Under 19 Doubles)</p>
               </div>
-              <h2 className="font-semibold my-5 text-center text-purple-200">ISSSA & BISSA Tennis Awards</h2>
-              <div className="flex flex-col items-center space-y-4 w-[40rem]">
+              <h2 className="font-semibold my-5 text-center text-purple-200 text-[0.65rem] lg:text-base xl:text-base">ISSSA & BISSA Tennis Awards</h2>
+              <div className="flex flex-col items-center space-y-2 lg:space-y-4 xl:space-y-4 w-[40rem] text-[0.65rem] lg:text-base xl:text-base">
               <p>BTA Notwane Open Tournament, 2016 - Gold Medal (Under 10 Doubles)</p>
               <p>BTA Francistown Junior Open, 2019 - Gold Medal (Under 16 Doubles)</p>
               <p>BTA Francistown Junior Open, 2019 - Gold Medal (Under 16 Singles)</p>
@@ -77,8 +77,8 @@ const TabsComponent = () => {
         )}
         {activeTab === 1 && (
           <div>
-            <h1 className="font-bold text-2xl my-10 text-center text-purple-800">Black belt hayashi ha shito ryu karateka</h1>
-            <div className="flex flex-col items-center space-y-6 w-[30rem]">
+            <h1 className="font-bold text-lg lg:text-2xl xl:text-2xl my-10 text-center text-purple-800">Black belt hayashi ha shito ryu karateka</h1>
+            <div className="flex flex-col items-center space-y-6 w-[20rem] lg:w-[30rem] xl:w-[30rem]">
               <h2 className="font-bold text-md text-purple-200">All Styles Karate Development & Elite Championships in Pretoria, South Africa (2013) - age category: 7-9 years</h2>
                 <p>Kata - Gold Medal</p>
                 <p>Kumite - Bronze medal</p>
@@ -94,7 +94,7 @@ const TabsComponent = () => {
           </div>
         )}
         {activeTab === 2 && (
-          <div className="flex flex-col items-center space-y-4 w-[40rem]">
+          <div className="flex flex-col items-center space-y-4 w-[20rem] lg:w-[40rem] xl:w-[40rem]">
             <h2 className="font-semibold my-5 text-center text-purple-200">Baobab Primary School</h2>
               <p>Baobab's Inter House Competitions, 2015 - Position 3 (Under 10 long jump)</p>
               <p>Baobab's Inter House Competitions, 2015 - Position 1 (Under 10 high jump)</p>
@@ -111,7 +111,7 @@ const TabsComponent = () => {
           </div>
         )}
         {activeTab === 3 && (
-            <div className="flex flex-col text-center space-y-4 w-[35rem]">
+            <div className="flex flex-col text-center space-y-4 w-[20rem] lg:w-[35rem] xl:w-[35rem]">
               <h2 className="font-semibold text-center text-purple-200">BothoHacks</h2>
               <p>Participated in my first ever hackathon</p>
               <p>Collaborated with 3 other university students as a highschooler</p>

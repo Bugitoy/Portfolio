@@ -32,19 +32,19 @@ const Experience = () => {
 
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
             <div className="flex flex-col">
-                <div className="flex flex-row gap-2">
-                    <div className="flex-1 z-1 w-[60rem]">
-                        <Passage />
-                    </div>
-                    <div className="flex-2 z-1 rounded-2xl w-[30rem] text-center ml-[0rem]">
-                        <AboutMeTabs />
-                    </div>
+              <div className="flex flex-col xl:flex-row lg:flex-row gap-2">
+                <div className="flex-1 z-1 w-[60rem]">
+                  <Passage />
                 </div>
-            <div className="flex flex-row">
-              <div className="flex-1 z-1 rounded-2xl w-[20rem] ">
+                <div className="flex-2 z-1 rounded-2xl w-[23rem] lg:w-[30rem] xl:w-[30rem] text-center ml-[0rem]">
+                  <AboutMeTabs />
+                </div>
+              </div>
+            <div className="flex flex-col xl:flex-row lg:flex-row gap-2">
+              <div className="flex-1 z-1 rounded-2xl w-full lg:w-[20rem] xl:w-[20rem] ">
                 <RepeatedBlocks />
               </div>
-              <div className="flex-2 relative z-1 w-[40rem] ">
+              <div className="flex-2 relative z-1 lg:w-[40rem] xl:w-[40rem] mb-[2rem]">
                 <ConnectedBlocks/>
               </div>
             </div>
@@ -76,8 +76,8 @@ const Experience = () => {
           </div>
         </div>
         <BackgroundCircles />
-        <div className="flex flex-row gap-7 bg-n-7 space-between">
-          <div className="flex-1 z-1 w-[10rem] hover:transform hover:scale-105 transition-transform duration-300">
+        <div className="flex flex-col xl:flex-row lg:flex-row gap-7 space-between">
+          <div className="flex-1 z-1 w-full lg:w-[10rem] xl:w-[10rem] hover:transform hover:scale-105 transition-transform duration-300">
             <img
               src={City}
               className="w-full rounded-[1rem] h-[50rem]"
@@ -86,7 +86,7 @@ const Experience = () => {
               alt="pixel guy talking"
             />
           </div>
-          <div className="flex-1 z-1 w-[10rem] mt-[-2rem] hover:transform hover:scale-105 transition-transform duration-300">
+          <div className="flex-1 z-1 w-full lg:w-[10rem] xl:w-[10rem] lg:mt-[-2rem] xl:mt-[-2rem] hover:transform hover:scale-105 transition-transform duration-300">
             <img
               src={Coast}
               className="w-full rounded-[1rem] h-[54rem]"
@@ -95,7 +95,7 @@ const Experience = () => {
               alt="pixel guy talking"
             />
           </div>
-          <div className="flex-1 z-1 w-[10rem] hover:transform hover:scale-105 transition-transform duration-300">
+          <div className="flex-1 z-1 w-full lg:w-[10rem] xl:w-[10rem] hover:transform hover:scale-105 transition-transform duration-300">
             <img
               src={Railway}
               className="w-full rounded-[1rem] h-[50rem]"

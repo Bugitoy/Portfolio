@@ -6,8 +6,8 @@ import PlusSvg from "../../../../assets/App/Others/PlusSvg";
 export const TopGradient = () => {
   return (
     <>
-      <div className="relative z-0 h-6 mx-6 bg-conic-gradient shadow-xl rounded-t-[1.25rem] lg:h-2.5 lg:mx-15" />
-      <div className="relative z-0 h-6 mx-2.5 bg-n-5 shadow-xl rounded-t-[1.25rem] lg:h-4 lg:mx-8" />
+      <div className="relative z-0 h-4 mx-6 bg-conic-gradient shadow-xl rounded-t-[1.25rem] lg:h-2.5 lg:mx-15" />
+      <div className="relative z-0 h-4 mx-2.5 bg-n-5 shadow-xl rounded-t-[1.25rem] lg:h-4 lg:mx-8" />
     </>
   );
 };
@@ -15,8 +15,8 @@ export const TopGradient = () => {
 export const BottomGradient = () => {
     return (
       <>
-        <div className="relative z-0 h-6 mx-2.5 bg-n-5 shadow-xl rounded-b-[1.25rem] lg:h-4 lg:mx-8" />
-        <div className="relative z-0 h-6 mx-6 bg-conic-gradient  shadow-xl rounded-b-[1.25rem] lg:h-2.5 lg:mx-15" />
+        <div className="relative z-0 h-4 mx-2.5 bg-n-5 shadow-xl rounded-b-[1.25rem] lg:h-4 lg:mx-8" />
+        <div className="relative z-0 h-4 mx-6 bg-conic-gradient  shadow-xl rounded-b-[1.25rem] lg:h-2.5 lg:mx-15" />
       </>
     );
   };

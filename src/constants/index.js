@@ -44,21 +44,26 @@ import {
 export const navigation = [
   {
     id: "0",
+    title: "Home",
+    url: "/",
+  },
+  {
+    id: "1",
     title: "About Me",
     url: "/about",
   },
   {
-    id: "1",
+    id: "2",
     title: "Projects",
     url: "/projects",
   },
   {
-    id: "2",
+    id: "3",
     title: "Blog",
     url: "/blog",
   },
   {
-    id: "3",
+    id: "4",
     title: "Roadmap",
     url: "/roadmap",
   },
@@ -70,12 +75,12 @@ export const navigation = [
     onlyMobile: true,
   },
   */
-  {
+  /*{
     id: "5",
     title: "Contact Me",
     url: "#contact",
     onlyMobile: true,
-  },
+  },*/
 ];
 
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];

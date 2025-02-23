@@ -80,28 +80,28 @@ const ParallaxImages = () => {
     <div className="mx-auto max-w-5xl px-4 pt-[200px]">
       <ParallaxImg
         src={deskman}
-        alt="And example of a space launch"
+        alt="African coding at his desk"
         start={-200}
         end={200}
         className="w-1/3"
       />
       <ParallaxImg
         src={Coding}
-        alt="An example of a space launch"
+        alt="guy coding at his desk"
         start={200}
         end={-250}
         className="mx-auto w-2/3"
       />
       <ParallaxImg
         src={MarioCoding}
-        alt="Orbiting satellite"
+        alt="Mario coding"
         start={-200}
         end={200}
         className="ml-auto w-1/3"
       />
       <ParallaxImg
         src={CarChilling}
-        alt="Orbiting satellite"
+        alt="Man chilling on a car"
         start={0}
         end={-500}
         className="ml-24 w-5/12"
@@ -149,13 +149,13 @@ const Schedule = () => {
       >
         Launch Schedule
       </motion.h1>
-      <ScheduleItem title="Began Coding this website" date="Dec 31st" location="Ohio" />
-      <ScheduleItem title="Went on to code a different website" date="Jan 7th" location="Ohio" />
-      <ScheduleItem title="Made a youtube video based on the second website" date="Jan 13th" location="Ohio" />
-      <ScheduleItem title="School began" date="Feb 22nd" location="Ohio" />
-      <ScheduleItem title="Multivariable calculus took most of my time" date="Mar 1st" location="Ohio" />
-      <ScheduleItem title="Finished the 2nd page of the first website" date="Mar 8th" location="Ohio" />
       <ScheduleItem title="Completed the 3rd & 4th pages then added some finishing touches on the website" date="Feb 9th" location="Ohio" />
+      <ScheduleItem title="Finished the 2nd page of my first website" date="Jan 17th" location="Ohio" />
+      <ScheduleItem title="Studying my degree takes most of my time away from personal projects" date="" location="Ohio" />
+      <ScheduleItem title="Made a tiktok video based on the second website" date="Jan 15th" location="Ohio" />
+      <ScheduleItem title="School began" date="Jan 13th" location="Ohio" />
+      <ScheduleItem title="Went on to code a different website" date="Jan 7th" location="Ohio" />
+      <ScheduleItem title="Began Coding this website" date="Jan 4th" location="Ohio" />
     </section>
   );
 };

@@ -70,8 +70,8 @@ const Features = () => {
         />
 
         <div className="relative">
-          <div className="relative z-1 flex items-center mb-[2rem] h-[40rem] border border-n-1/10 overflow-hidden lg:p-10 xl:h-[40rem]">
-            <div className="relative z-1 flex gap-4">
+          <div className="relative z-1 flex sm: flex-col lg:flex-row items-center mb-[2rem] sm: py-[2rem] sm: h-full md: h-[40rem] lg: h-[40rem] xl: h-[40rem] border border-n-1/10 overflow-hidden lg:p-10 xl:h-[40rem]">
+            <div className="relative z-1 flex sm: flex-col lg:flex-row gap-4">
               {achievements.map((achievement, index) => (
                 <AchievementCard
                   key={index}
@@ -84,8 +84,8 @@ const Features = () => {
           </div>
 
           <div className="relative z-1 grid gap-5 lg:grid-cols-2">
-            <div className="relative min-h-[39rem] border border-n-1/10 overflow-hidden">
-              <div className="absolute inset-9 mb-[0rem]">
+            <div className="relative sm: min-h-[44rem] md: min-h-[39rem] lg: min-h-[39rem] xl: min-h-[39rem] border border-n-1/10 overflow-hidden">
+              <div className="absolute inset-5 mb-[0rem]">
                 <img
                   src={AfricanCoder}
                   className="h-full w-full ml-[0rem] rounded-[2rem]"
@@ -95,9 +95,9 @@ const Features = () => {
                 />
               </div>
 
-              <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
-                <h4 className="h4 ml-[1rem] mb-4">Senior Member of the Advocates for Red Cross Committee</h4>
-                <ul className="list-disc pl-3 text-white">
+              <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg: p-15">
+                <h4 className="h4 ml-[1rem] mb-4 sm: w-[17rem] lg:w-full">Senior Member of the Advocates for Red Cross Committee</h4>
+                <ul className="pl-3 text-white sm: text-sm">
                   <li className="mb-2">
                     This committe has done many charitable activities such as:
                   </li>
@@ -110,7 +110,7 @@ const Features = () => {
                   <li className="mb-2">
                     Hosted a school bake sale during Valentine’s Day and used the total money raised to  buy food for the disabled people.
                   </li>
-                  <li className="mb-0">
+                  <li className="mb-5">
                     Collected clothing and donations in monetary form from Legae Academy students and donated it to the Botswana Red Cross Society.
                   </li>
                 </ul>
