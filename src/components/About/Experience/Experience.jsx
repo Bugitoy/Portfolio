@@ -36,7 +36,7 @@ const Experience = () => {
                 <div className="flex-1 z-1 w-[60rem]">
                   <Passage />
                 </div>
-                <div className="flex-2 z-1 rounded-2xl w-[23rem] lg:w-[30rem] xl:w-[30rem] text-center ml-[0rem]">
+                <div className="flex-2 z-1 rounded-2xl w-[20rem] lg:w-[30rem] xl:w-[30rem] text-center ml-[0rem]">
                   <AboutMeTabs />
                 </div>
               </div>

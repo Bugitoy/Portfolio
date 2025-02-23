@@ -27,13 +27,13 @@ const Tabs = () => {
                     onClick={() => setFilter("AI and Machine Learning")} 
                     className={`px-4 py-2 rounded-2xl ${filter === "AI and Machine Learning" ? "bg-purple-600 text-white" : "bg-white text-black border border-gray-300"}`}
                 >
-                    AI and Machine Learning
+                    Computer Graphics
                 </button>
                 <button 
                     onClick={() => setFilter("Computer Graphics")} 
                     className={`px-4 py-2 rounded-2xl ${filter === "Computer Graphics" ? "bg-purple-600 text-white" : "bg-white text-black border border-gray-300"}`}
                 >
-                    Computer Graphics
+                    AI and Machine Learning 
                 </button>
                 <button 
                     onClick={() => setFilter("Electric Circuits")} 
@@ -45,7 +45,7 @@ const Tabs = () => {
                     onClick={() => setFilter("Politics, History and Articles")} 
                     className={`px-4 py-2 rounded-2xl ${filter === "Politics, History and Articles" ? "bg-purple-600 text-white" : "bg-white text-black border border-gray-300"}`}
                 >
-                    Politics, History and Articles
+                    Articles
                 </button>
             </div>
             <div className="relative grid gap-6 md:grid-cols-2 mb-[10rem] md:gap-4 md:pb-[7rem] sm: mt-[2rem]">

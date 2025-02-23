@@ -51,7 +51,7 @@ const TabsComponent = () => {
         {activeTab === 0 && (
           <div>
             <h2 className="font-semibold text-[0.65rem] lg:text-base xl:text-base mb-4 text-center text-purple-200">ISSSA & BISSA Tennis Awards</h2>
-            <div className="flex flex-col items-center space-y-2 lg:space-y-4 xl:space-y-4 w-[40rem] text-[0.65rem] lg:text-base xl:text-base">
+            <div className="flex flex-col items-center space-y-2 lg:space-y-4 xl:space-y-4 w-[40rem] text-[0.55rem] lg:text-base xl:text-base">
               <p>ISSSA Tennis Championships, 2018 - Bronze Medal (Under 19 Singles)</p>
               <p>ISSSA Beginners Tennis Tournament, 2018 - Silver Medal (Under 19 Singles)</p>
               <p>BISSA Tennis National team qualifiers, 2019 - 4th (Singles)</p>
@@ -65,7 +65,7 @@ const TabsComponent = () => {
               <p>ISSSA Tennis Doubles Championships, 2023 - Gold Medal (Under 19 Doubles)</p>
               </div>
               <h2 className="font-semibold my-5 text-center text-purple-200 text-[0.65rem] lg:text-base xl:text-base">ISSSA & BISSA Tennis Awards</h2>
-              <div className="flex flex-col items-center space-y-2 lg:space-y-4 xl:space-y-4 w-[40rem] text-[0.65rem] lg:text-base xl:text-base">
+              <div className="flex flex-col items-center space-y-2 lg:space-y-4 xl:space-y-4 w-[40rem] text-[0.55rem] lg:text-base xl:text-base">
               <p>BTA Notwane Open Tournament, 2016 - Gold Medal (Under 10 Doubles)</p>
               <p>BTA Francistown Junior Open, 2019 - Gold Medal (Under 16 Doubles)</p>
               <p>BTA Francistown Junior Open, 2019 - Gold Medal (Under 16 Singles)</p>

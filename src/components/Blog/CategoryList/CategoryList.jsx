@@ -18,59 +18,29 @@ const CategoryList = () => {
       <div className="container relative" ref={parallaxRef}>
         <h1 className="mb-[50px] my-[0] sm: text-center sm: text-2xl">Popular Categories</h1>
         <div className="flex flex-wrap justify-between pb-[70px] sm: pb-0 sm: px-[20px]">
-                <a href="" className="flex items-center justify-center sm: mb-[2rem] gap-[20px] capitalize w-[10rem] h-[80px] rounded-[10px] bg-[#57c4ff31]">
-                    <img
-                        src={StreetCrossing}
-                        className="rounded-[0.5rem]"
-                        width={50}
-                        height={50}
-                        alt=""/>
-                        HTML
+                <a href="" className="flex items-center justify-center sm: mb-[2rem] gap-[20px] capitalize w-[9rem] h-[80px] rounded-[10px] bg-[#57c4ff31]">
+                  HTML
                 </a>
-                <a href="" className="flex items-center justify-center sm: mb-[2rem] gap-[20px] capitalize w-[10rem] h-[80px] rounded-[10px] bg-[#da85c731]">
-                    <img
-                        src={StreetCrossing}
-                        className="rounded-[0.5rem]"
-                        width={50}
-                        height={50}
-                        alt=""/>
-                        CSS
+                <a href="" className="flex items-center justify-center sm: mb-[2rem] gap-[20px] capitalize w-[7rem] h-[80px] rounded-[10px] bg-[#da85c731]">
+                  CSS
                 </a>
-                <a href="" className="flex items-center justify-center sm: mb-[2rem] gap-[20px] capitalize w-[10rem] h-[80px] rounded-[10px] bg-[#7fb88133]">
-                    <img
-                        src={StreetCrossing}
-                        className="rounded-[0.5rem]"
-                        width={50}
-                        height={50}
-                        alt=""/>
-                        C#
+                <a href="" className="flex items-center justify-center sm: mb-[2rem] gap-[20px] capitalize w-[5rem] h-[80px] rounded-[10px] bg-[#7fb88133]">
+                  C#
                 </a>
-                <a href="" className="flex items-center justify-center sm: mb-[2rem] gap-[20px] capitalize w-[10rem] h-[80px] rounded-[10px] bg-[#ff795736]">
-                    <img
-                        src={StreetCrossing}
-                        className="rounded-[0.5rem]"
-                        width={50}
-                        height={50}
-                        alt=""/>
-                        Javascript
+                <a href="" className="flex items-center justify-center sm: mb-[2rem] gap-[20px] capitalize w-[11rem] h-[80px] rounded-[10px] bg-[#ff795736]">
+                  Javascript
                 </a>
-                <a href="" className="flex items-center justify-center sm: mb-[2rem] gap-[20px] capitalize w-[10rem] h-[80px] rounded-[10px] bg-[#ffb04f45]">
-                    <img
-                        src={StreetCrossing}
-                        className="rounded-[0.5rem]"
-                        width={50}
-                        height={50}
-                        alt=""/>
-                        C++
+                <a href="" className="flex items-center justify-center sm: mb-[2rem] gap-[20px] capitalize w-[7rem] h-[80px] rounded-[10px] bg-[#ffb04f45]">
+                  C++
                 </a>
-                <a href="" className="flex items-center justify-center sm: mb-[2rem] gap-[20px] capitalize w-[10rem] h-[80px] rounded-[10px] bg-[#5e4fff31]">
-                    <img
+                <a href="" className="flex items-center justify-center sm: mb-[2rem] gap-[20px] capitalize w-[9rem] h-[80px] rounded-[10px] bg-[#5e4fff31]">
+                  {/*<img
                         src={StreetCrossing}
                         className="rounded-[0.5rem]"
                         width={50}
                         height={50}
-                        alt=""/>
-                        MongoDB
+                        alt=""/>*/}
+                  MongoDB
                 </a>
         </div> 
       </div>

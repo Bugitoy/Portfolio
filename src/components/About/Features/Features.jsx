@@ -96,7 +96,7 @@ const Features = () => {
               </div>
 
               <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg: p-15">
-                <h4 className="h4 ml-[1rem] mb-4 sm: w-[17rem] lg:w-full">Senior Member of the Advocates for Red Cross Committee</h4>
+                <h4 className="h4 ml-[1rem] mb-4 lg: w-full sm: text-[1.55rem]">Senior Member of the Advocates for Red Cross Committee</h4>
                 <ul className="pl-3 text-white sm: text-sm">
                   <li className="mb-2">
                     This committe has done many charitable activities such as:
