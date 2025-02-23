@@ -3,7 +3,7 @@ import { pixelman, futuristiccity, SomethingHere } from "../../../../assets/Abou
 
 const CardComponent = () => {
   return (
-      <div className="card group relative flex h-[40rem] w-[calc(30rem/1.5)] lg:w-[calc(40rem/1.5)] xl:w-[calc(40rem/1.5)] mt-[11rem] 
+      <div className="card group relative flex h-[40rem] w-[calc(34.5rem/1.5)] lg:w-[calc(40rem/1.5)] xl:w-[calc(40rem/1.5)] mt-[11rem] 
                       justify-center items-end p-0 perspective-[2500px] lg:mx-10 xl:mx-10 rounded-2xl">
         <div className="wrapper transition-all duration-500 absolute w-full -z-10 
                         group-hover:transform group-hover:perspective-[900px] group-hover:-translate-y-1/20 
