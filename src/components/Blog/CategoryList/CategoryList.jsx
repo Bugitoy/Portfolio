@@ -16,9 +16,9 @@ const CategoryList = () => {
     >
         
       <div className="container relative" ref={parallaxRef}>
-        <h1 className="mb-[50px] my-[0]">Popular Categories</h1>
-        <div className="flex flex-wrap justify-between pb-[70px]">
-                <a href="" className="flex items-center justify-center gap-[20px] capitalize w-[15%] h-[80px] rounded-[10px] bg-[#57c4ff31]">
+        <h1 className="mb-[50px] my-[0] sm: text-center sm: text-2xl">Popular Categories</h1>
+        <div className="flex flex-wrap justify-between pb-[70px] sm: pb-0 sm: px-[20px]">
+                <a href="" className="flex items-center justify-center sm: mb-[2rem] gap-[20px] capitalize w-[10rem] h-[80px] rounded-[10px] bg-[#57c4ff31]">
                     <img
                         src={StreetCrossing}
                         className="rounded-[0.5rem]"
@@ -27,7 +27,7 @@ const CategoryList = () => {
                         alt=""/>
                         HTML
                 </a>
-                <a href="" className="flex items-center justify-center gap-[20px] capitalize w-[15%] h-[80px] rounded-[10px] bg-[#da85c731]">
+                <a href="" className="flex items-center justify-center sm: mb-[2rem] gap-[20px] capitalize w-[10rem] h-[80px] rounded-[10px] bg-[#da85c731]">
                     <img
                         src={StreetCrossing}
                         className="rounded-[0.5rem]"
@@ -36,7 +36,7 @@ const CategoryList = () => {
                         alt=""/>
                         CSS
                 </a>
-                <a href="" className="flex items-center justify-center gap-[20px] capitalize w-[15%] h-[80px] rounded-[10px] bg-[#7fb88133]">
+                <a href="" className="flex items-center justify-center sm: mb-[2rem] gap-[20px] capitalize w-[10rem] h-[80px] rounded-[10px] bg-[#7fb88133]">
                     <img
                         src={StreetCrossing}
                         className="rounded-[0.5rem]"
@@ -45,7 +45,7 @@ const CategoryList = () => {
                         alt=""/>
                         C#
                 </a>
-                <a href="" className="flex items-center justify-center gap-[20px] capitalize w-[15%] h-[80px] rounded-[10px] bg-[#ff795736]">
+                <a href="" className="flex items-center justify-center sm: mb-[2rem] gap-[20px] capitalize w-[10rem] h-[80px] rounded-[10px] bg-[#ff795736]">
                     <img
                         src={StreetCrossing}
                         className="rounded-[0.5rem]"
@@ -54,7 +54,7 @@ const CategoryList = () => {
                         alt=""/>
                         Javascript
                 </a>
-                <a href="" className="flex items-center justify-center gap-[20px] capitalize w-[15%] h-[80px] rounded-[10px] bg-[#ffb04f45]">
+                <a href="" className="flex items-center justify-center sm: mb-[2rem] gap-[20px] capitalize w-[10rem] h-[80px] rounded-[10px] bg-[#ffb04f45]">
                     <img
                         src={StreetCrossing}
                         className="rounded-[0.5rem]"
@@ -63,7 +63,7 @@ const CategoryList = () => {
                         alt=""/>
                         C++
                 </a>
-                <a href="" className="flex items-center justify-center gap-[20px] capitalize w-[15%] h-[80px] rounded-[10px] bg-[#5e4fff31]">
+                <a href="" className="flex items-center justify-center sm: mb-[2rem] gap-[20px] capitalize w-[10rem] h-[80px] rounded-[10px] bg-[#5e4fff31]">
                     <img
                         src={StreetCrossing}
                         className="rounded-[0.5rem]"

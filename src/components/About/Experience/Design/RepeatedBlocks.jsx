@@ -8,7 +8,7 @@ import { Coding, MarioCoding, Studying, Walking } from "../../../../assets/About
 import Draggable from "react-draggable";
 
 const RenderRepeatedBlocks = () => {
-  const leftOffsets = ["5%", "-5%", "10%"];
+  const leftOffsets = ["12%", "-10%", "5%"];
   const images = [Coding, MarioCoding, Walking];
 
   return (

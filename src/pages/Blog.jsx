@@ -19,7 +19,7 @@ const Blog = () => {
             <div className="flex-2">
               <CardList />
             </div>
-            <div className="flex-1">
+            <div className="flex-1 hidden lg:block xl:block">
               <Menu />
             </div>
           </div>

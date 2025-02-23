@@ -40,7 +40,7 @@ const Featured = () => {
         <h1 className="text-[96px] z-1 font-light sm:text-[72px] md:text-[45px] lg:text-[48px] lg:mt-[3rem] xl:text-[36px] leading-[4rem]">
             - Discover my stories and creative ideas -
         </h1>
-        <div className=" mt-[60px] mb-[100px] flex items-center gap-[25px]">
+        <div className=" mt-[60px] lg:mb-[100px] xl:mb-[100px] flex items-center gap-[25px] sm: flex-col">
             <div className="relative flex-1">
                 <img
                     src={StreetCrossing}
@@ -50,7 +50,7 @@ const Featured = () => {
                     alt="Man crossing the street"
                     />
             </div>
-            <div className="z-1 flex flex-1 flex-col gap-[20px]">
+            <div className="z-1 flex flex-1 flex-col gap-[20px] sm: items-center sm: text-center">
                 <h1 className="text-[20px]">Lorem ipsum dolor sit amet alim consectetur adipisicing elit.</h1>
                 <p className="text-[15px] font-light text-gray-500">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.

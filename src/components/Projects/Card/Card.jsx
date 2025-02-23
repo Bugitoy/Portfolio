@@ -20,7 +20,7 @@ const Card = () => {
       <div className="container relative" ref={parallaxRef}>
         <a
           href="#"
-          className="h-[30rem] flex flex-col  bg-white border border-bg-n-6 rounded-lg shadow-sm md:flex-row hover:bg-n-6 dark:border-n-6 dark:bg-n-8 dark:hover:bg-n-6"
+          className="h-[30rem] sm: h-full flex flex-col  bg-white border border-bg-n-6 rounded-lg shadow-sm md:flex-row hover:bg-n-6 dark:border-n-6 dark:bg-n-8 dark:hover:bg-n-6"
         >
           <img
             className="object-cover w-full rounded-t-lg md:h-auto md:w-68 md:rounded-none md:rounded-s-lg"

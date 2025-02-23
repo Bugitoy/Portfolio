@@ -16,7 +16,7 @@ const Tabs = () => {
 
     return (
         <div className="container relative flex flex-col items-center justify-center z-2">
-            <div className="flex justify-center w-full h-[4rem] space-x-4 mb-8">
+            <div className="flex justify-center w-full h-[4rem] space-x-4 mb-8 sm: text-xs sm: flex-wrap">
                 <button 
                     onClick={() => setFilter("All")} 
                     className={`px-4 py-2 rounded-2xl ${filter === "All" ? "bg-purple-600 text-white" : "bg-white text-black border border-gray-300"}`}
@@ -48,7 +48,7 @@ const Tabs = () => {
                     Politics, History and Articles
                 </button>
             </div>
-            <div className="relative grid gap-6 md:grid-cols-2 mb-[10rem] md:gap-4 md:pb-[7rem]">
+            <div className="relative grid gap-6 md:grid-cols-2 mb-[10rem] md:gap-4 md:pb-[7rem] sm: mt-[2rem]">
 
                 {filteredList.map((item) => {
                     const status = item.status === "done" ? "Done" : "In progress";
