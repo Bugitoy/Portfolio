@@ -20,7 +20,7 @@ export const PhotoChatMessage = () => {
     <div className="absolute sm: text-xs md: max-w-[11.5rem]  lg: max-w-[11.5rem]  xl: max-w-[11.5rem] py-2 px-5 bg-n-5 rounded-t-xl rounded-bl-xl font-code text-base  sm: top-[9.1rem] sm: max-w-[9rem] sm: left-[2rem] md:left-[3rem] md: max-w-[27rem] md:top-[13rem] lg:top-[23rem] lg:left-[3.5rem] lg:right-[18rem] lg:max-w-[17.5rem]">
       Didn't know you were this good.
       <ChatBubbleWing 
-      className="absolute sm: left-[8rem] md:left-[8.9rem] lg:left-[17rem]  lg:max-h-[2rem] bottom-0" 
+      className="absolute left-[8rem] md:left-[8.5rem] lg:left-[5rem] xl:left-[15rem] lg:max-h-[2rem] bottom-0" 
       pathClassName="fill-n-5"/>
     </div>
   );
@@ -42,7 +42,7 @@ export const VideoChatMessage = () => {
         just now
       </p>
       <ChatBubbleWing
-        className="absolute bottom-0 -scale-x-100 md:left-[8.9rem] lg:left-[-1.5rem]"
+        className="absolute bottom-0 -scale-x-100 left-[-1rem] md:left-[-1rem] lg:left-[-1.5rem]"
         pathClassName="fill-n-6"
       />
     </div>

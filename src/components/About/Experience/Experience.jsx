@@ -33,10 +33,10 @@ const Experience = () => {
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
             <div className="flex flex-col">
               <div className="flex flex-col xl:flex-row lg:flex-row gap-2">
-                <div className="flex-1 z-1 w-[60rem]">
+                <div className="flex-1 z-1">
                   <Passage />
                 </div>
-                <div className="flex-2 z-1 rounded-2xl w-[20rem] lg:w-[30rem] xl:w-[30rem] text-center ml-[0rem]">
+                <div className="flex-2 z-1 rounded-2xl w-full lg:w-[30rem] xl:w-[30rem]">
                   <AboutMeTabs />
                 </div>
               </div>

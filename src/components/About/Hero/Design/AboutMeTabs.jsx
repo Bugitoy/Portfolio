@@ -77,7 +77,7 @@ const TabsComponent = () => {
         )}
         {activeTab === 1 && (
           <div>
-            <h1 className="font-bold text-lg lg:text-2xl xl:text-2xl my-10 text-center text-purple-800">Black belt hayashi ha shito ryu karateka</h1>
+            <h1 className="font-bold text-lg lg:text-2xl xl:text-2xl my-10 text-center text-purple-600">Black belt hayashi ha shito ryu karateka</h1>
             <div className="flex flex-col items-center space-y-6 w-[20rem] lg:w-[30rem] xl:w-[30rem]">
               <h2 className="font-bold text-md text-purple-200">All Styles Karate Development & Elite Championships in Pretoria, South Africa (2013) - age category: 7-9 years</h2>
                 <p>Kata - Gold Medal</p>

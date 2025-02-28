@@ -37,10 +37,10 @@ const Featured = () => {
             />
           </div>
         </div>
-        <h1 className="text-[96px] sm: text-[70px] z-1 font-light sm:text-[72px] md:text-[45px] lg:text-[48px] lg:mt-[3rem] xl:text-[36px] leading-[4rem]">
+        <h1 className="text-[96px] sm: text-[70px] z-1 font-light md:text-[45px] lg:text-[48px] lg:mt-[3rem] xl:text-[36px] leading-[4rem]">
             - Discover my stories and creative ideas -
         </h1>
-        <div className=" mt-[60px] lg:mb-[100px] xl:mb-[100px] flex items-center gap-[25px] sm: flex-col">
+        <div className=" mt-[60px] lg:mb-[100px] xl:mb-[100px] flex items-center gap-[25px] flex-col lg:flex-row xl:flex-row">
             <div className="relative flex-1">
                 <img
                     src={StreetCrossing}

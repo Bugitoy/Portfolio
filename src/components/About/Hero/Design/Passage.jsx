@@ -1,10 +1,14 @@
 import React from 'react';
-import { pixelman, futuristiccity, SomethingHere } from "../../../../assets/About";
+import { pixelman, futuristiccity } from "../../../../assets/About";
 
 const CardComponent = () => {
   return (
-      <div className="card group relative flex h-[40rem] w-[calc(30rem/1.5)] lg:w-[calc(40rem/1.5)] xl:w-[calc(40rem/1.5)] mt-[11rem] 
-                      justify-center items-end p-0 perspective-[2500px] lg:mx-10 xl:mx-10 rounded-2xl">
+    <div className="flex justify-center items-center"> 
+      <div className="group relative flex h-[40rem] w-[calc(30rem/1.3)] 
+                      sm:mx-auto md:mx-auto 
+                      lg:w-[calc(40rem/1.5)] xl:w-[calc(40rem/1.5)] lg:mx-10 xl:mx-10
+                      mt-[11rem] justify-center items-end p-0 
+                      perspective-[2500px] rounded-2xl">
         <div className="wrapper transition-all duration-500 absolute w-full -z-10 
                         group-hover:transform group-hover:perspective-[900px] group-hover:-translate-y-1/20 
                         group-hover:rotate-x-[25deg] group-hover:shadow-[2px_35px_32px_-8px_rgba(0,0,0,0.75)] 
@@ -22,12 +26,6 @@ const CardComponent = () => {
                           group-hover:h-30 rounded-3xl" />
         </div>
 
-        {/*<img
-          src={SomethingHere}
-          alt="Title"
-          className="title w-full transition-transform duration-500 group-hover:transform group-hover:translate-y-[-10px] group-hover:translate-z-[100px]"
-        />*/}
-
         <img
           src={pixelman}
           alt="Character"
@@ -35,8 +33,8 @@ const CardComponent = () => {
                     group-hover:opacity-100 group-hover:translate-y-[-10%] group-hover:translate-z-[100px] rounded-3xl"
         />
       </div>
+    </div>
   );
 };
 
 export default CardComponent;
-

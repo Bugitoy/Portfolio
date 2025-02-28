@@ -18,7 +18,7 @@ const ConnectedBlocks = () => {
           <LeftCurve />
           <RightCurve />
         </div>
-        <div className="flex justify-center mt-8"> {/* Center the button and add space above */}
+        <div className="flex justify-center mt-8"> 
           <Button className="">Read about me</Button>
         </div>
       </div>
