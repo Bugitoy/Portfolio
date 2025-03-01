@@ -18,13 +18,6 @@ const CardList = () => {
         </h1>
         <div className="">
             <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
         </div>
       </div>
     </Section>

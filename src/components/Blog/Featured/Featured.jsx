@@ -1,7 +1,7 @@
 import React from "react";
 import Section from "../../Section";
 import { useRef } from "react";
-import { StreetCrossing, TennisMan, twospaceman, Vibing} from "../../../assets/Blog";
+import { StreetCrossing, nightFire } from "../../../assets/Blog";
 
 const Featured = () => {
     const parallaxRef = useRef(null);
@@ -29,7 +29,7 @@ const Featured = () => {
             }}
           >
             <img
-              src={twospaceman}
+              src={nightFire}
               className="w-full"
               width={1920}
               height={955}

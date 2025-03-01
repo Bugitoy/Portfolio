@@ -22,10 +22,10 @@ const Section = ({
     >
       {children}
 
-      <div className="hidden absolute top-0 left-5 w-0.25 h-full bg-stroke-1 pointer-events-none md:block lg:left-7.5 xl:left-10" />
-      <div className="hidden absolute top-0 right-5 w-0.25 h-full bg-stroke-1 pointer-events-none md:block lg:right-7.5 xl:right-10" />
+      <div className="hidden absolute top-0 left-5 w-0.25 h-[110.4rem] bg-stroke-1 pointer-events-none md:block lg:left-7.5 xl:left-10" />
+      <div className="hidden absolute top-0 right-5 w-0.25 h-[110.4rem] bg-stroke-1 pointer-events-none md:block lg:right-7.5 xl:right-10" />
 
-      <div className="hidden absolute top-[106.4rem] left-10 right-10 h-0.25 bg-n-6 pointer-events-none xl:block" />
+      <div className="hidden absolute top-[110.4rem] left-10 right-10 h-0.25 bg-n-6 pointer-events-none xl:block" />
 
       {/*<PlusSvg className="hidden absolute top-[117.90rem] left-[2.1875rem] z-2 pointer-events-none xl:block" />
 

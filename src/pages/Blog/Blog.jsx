@@ -1,11 +1,11 @@
 import React from "react";
-import Header from "../components/App/Header/Header";
-import Footer from "../components/App/Footer/Footer";
-import ButtonGradient from "../assets/App/Others/ButtonGradient";
-import Featured from "../components/Blog/Featured/Featured";
-import CategoryList from "../components/Blog/CategoryList/CategoryList";
-import CardList from "../components/Blog/CardList/CardList";
-import Menu from "../components/Blog/Menu/Menu";
+import Header from "../../components/App/Header/Header";
+import Footer from "../../components/App/Footer/Footer";
+import ButtonGradient from "../../assets/App/Others/ButtonGradient";
+import Featured from "../../components/Blog/Featured/Featured";
+import CategoryList from "../../components/Blog/CategoryList/CategoryList";
+import CardList from "../../components/Blog/CardList/CardList";
+import Menu from "../../components/Blog/Menu/Menu";
 
 
 const Blog = () => {
@@ -15,7 +15,7 @@ const Blog = () => {
           <Header />
           <Featured />
           <CategoryList />
-          <div className="container flex ">
+          <div className="container flex">
             <div className="flex-2">
               <CardList />
             </div>

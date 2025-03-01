@@ -1,4 +1,3 @@
-import { StreetCrossing, TennisMan, twospaceman, Vibing} from "../../../assets/Blog";
 import Section from "../../Section";
 import { BottomLine } from "./Design/CategoryDesign";
 import { useRef } from "react";
@@ -16,7 +15,7 @@ const CategoryList = () => {
     >
         
       <div className="container relative" ref={parallaxRef}>
-        <h1 className="mb-[50px] my-[0] sm: text-center sm: text-2xl">Popular Categories</h1>
+        <h1 className="mb-[80px] my-[0] sm: text-center sm: text-2xl">Popular Categories</h1>
         <div className="flex flex-wrap justify-between pb-[70px] sm: pb-0 sm: px-[20px]">
                 <a href="" className="flex items-center justify-center sm: mb-[2rem] gap-[20px] capitalize w-[9rem] h-[80px] rounded-[10px] bg-[#57c4ff31]">
                   HTML
@@ -34,12 +33,6 @@ const CategoryList = () => {
                   C++
                 </a>
                 <a href="" className="flex items-center justify-center sm: mb-[2rem] gap-[20px] capitalize w-[9rem] h-[80px] rounded-[10px] bg-[#5e4fff31]">
-                  {/*<img
-                        src={StreetCrossing}
-                        className="rounded-[0.5rem]"
-                        width={50}
-                        height={50}
-                        alt=""/>*/}
                   MongoDB
                 </a>
         </div> 

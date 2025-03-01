@@ -1,4 +1,3 @@
-import { StreetCrossing, TennisMan, twospaceman, Vibing} from "../../../assets/Blog";
 import Section from "./Design/Design";
 import MenuPosts from "./MenuPosts/MenuPosts";
 import MenuCategories from "./MenuCategories/MenuCategories";
@@ -13,9 +12,9 @@ const Menu = () => {
       customPaddings
       id="hero"
     >
-      <div className="container flex-2 mt-[60px]">
-        <h2 className="text-pink-300 text-4xl font-[500]">What's Hot</h2>
-        <h1 className="text-xl">Most Popular</h1>
+      <div className="container flex-2 mt-[60px] text-center">
+        <h2 className="text-pink-300 text-4xl  font-[500]">What's Hot</h2>
+        <h1 className="text-xl ">Most Popular</h1>
 
         <MenuPosts/>
 
