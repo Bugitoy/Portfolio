@@ -37,6 +37,7 @@ import {
   slack,
   sliders04,
   telegram,
+  linkedin,
   twitter,
   yourlogo,
 } from "../assets/App";
@@ -408,33 +409,33 @@ export const benefits = [
 
 export const socials = [
   {
-    id: "0",
-    title: "Discord",
-    iconUrl: discordBlack,
-    url: "#",
-  },
-  {
     id: "1",
-    title: "Twitter",
-    iconUrl: twitter,
-    url: "#",
+    title: "LinkedIn",
+    iconUrl: linkedin,
+    url: "https://www.linkedin.com/in/lefikamoalosi",
   },
   {
     id: "2",
     title: "Instagram",
     iconUrl: instagram,
-    url: "#",
+    url: "https://www.instagram.com/lefikatheboy/",
   },
   {
     id: "3",
-    title: "Telegram",
-    iconUrl: telegram,
-    url: "#",
+    title: "Discord",
+    iconUrl: discordBlack,
+    url: "https://discordapp.com/users/769639831667212358",
   },
   {
     id: "4",
+    title: "Twitter",
+    iconUrl: twitter,
+    url: "https://x.com/LefikaMoalosi",
+  },
+  {
+    id: "5",
     title: "Facebook",
     iconUrl: facebook,
-    url: "#",
+    url: "https://www.facebook.com/profile.php?id=100076984638540",
   },
 ];
