@@ -3,10 +3,8 @@ import Section from "../../Section";
 import Heading from "../../Heading";
 import {check} from "../../../assets/App";
 import { AfricanCoder, BadCity, CityTop, DesertVillage, Jupiter, NightCoding, OfficeCoder, pinkTerrain, PixelArtClassroom, SadRobot, StarWarsWalker, StreetWalk} from "../../../assets/About";
-import { brainwaveServices, programmingHub, microsoftLearn, freeCodeCamp, brainwaveServicesIcons, codingX } from "../../../constants";
-import {PhotoChatMessage, Gradient, VideoBar, VideoChatMessage,} from "../../App/Services/Design/Services";
-
-import Generating from "../../Generating";
+import { programmingHub, microsoftLearn, freeCodeCamp, codingX } from "../../../constants";
+import { Gradient } from "../../App/Services/Design/Services";
 
 const AchievementCard = ({ title, description, services }) => (
   <div className="flex-1 z-1 rounded-2xl w-[18rem]">

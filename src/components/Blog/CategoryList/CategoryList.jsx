@@ -18,10 +18,10 @@ const CategoryList = () => {
         <h1 className="mb-[80px] my-[0] sm: text-center sm: text-2xl">Popular Categories</h1>
         <div className="flex flex-wrap justify-between pb-[70px] sm: pb-0 sm: px-[20px]">
                 <a href="" className="flex items-center justify-center sm: mb-[2rem] gap-[20px] capitalize w-[9rem] h-[80px] rounded-[10px] bg-[#57c4ff31]">
-                  HTML
+                  Typescript
                 </a>
                 <a href="" className="flex items-center justify-center sm: mb-[2rem] gap-[20px] capitalize w-[7rem] h-[80px] rounded-[10px] bg-[#da85c731]">
-                  CSS
+                  Node.js
                 </a>
                 <a href="" className="flex items-center justify-center sm: mb-[2rem] gap-[20px] capitalize w-[5rem] h-[80px] rounded-[10px] bg-[#7fb88133]">
                   C#

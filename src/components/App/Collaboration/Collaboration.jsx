@@ -1,5 +1,6 @@
 import { crown, check } from "../../../assets/App";
 import { collabApps, collabContent, topText } from "../../../constants";
+import { Link } from "react-router-dom";
 import Button from "../../Button";
 import Section from "../../Section";
 import { LeftCurve, RightCurve } from "./Design/Collaboration";
@@ -27,7 +28,9 @@ const Collaboration = () => {
               </li>
             ))}
           </ul>
-          <Button className={"sm: ml-[6.5rem]"}>Read about me</Button>
+          <Link to="/about">
+            <Button className={"ml-[6.5rem] lg:ml-[3rem]"}>Read about me</Button>
+          </Link>
         </div>
 
         <div className="lg:ml-auto xl:w-[38rem] sm: mt-[3rem] md: mt-4 lg: mt-4 xl: mt-4">
@@ -35,7 +38,7 @@ const Collaboration = () => {
             {topText}
           </p>
 
-          <div className="relative left-1/2 flex w-[22rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 sm: mt-[5rem] md:scale-100">
+          <div className="relative left-1/2 flex w-[20rem] lg:w-[22rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 sm: mt-[5rem] md:scale-100">
             <div className="flex w-60 aspect-square m-auto border border-n-6 rounded-full">
               <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">
                 <div className="flex items-center justify-center w-full h-full bg-n-8 rounded-full">

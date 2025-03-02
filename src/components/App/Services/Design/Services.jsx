@@ -17,10 +17,10 @@ export const Gradient = () => {
 
 export const PhotoChatMessage = () => {
   return (
-    <div className="absolute sm: text-xs md: max-w-[11.5rem]  lg: max-w-[11.5rem]  xl: max-w-[11.5rem] py-2 px-5 bg-n-5 rounded-t-xl rounded-bl-xl font-code text-base  sm: top-[9.1rem] sm: max-w-[9rem] sm: left-[2rem] md:left-[3rem] md: max-w-[27rem] md:top-[13rem] lg:top-[23rem] lg:left-[3.5rem] lg:right-[18rem] lg:max-w-[17.5rem]">
+    <div className="absolute sm: text-xs md: max-w-[11.5rem]  lg: max-w-[11.5rem]  xl: max-w-[11.5rem] py-2 px-5 bg-n-5 rounded-t-xl rounded-bl-xl font-code text-base  sm: top-[9.1rem] sm: max-w-[9rem] sm: left-[3rem] md:left-[3rem] md: max-w-[27rem] md:top-[13rem] lg:top-[23rem] lg:left-[3.5rem] lg:right-[18rem] lg:max-w-[17.5rem]">
       Didn't know you were this good.
       <ChatBubbleWing 
-      className="absolute left-[8rem] md:left-[8.5rem] lg:left-[5rem] xl:left-[15rem] lg:max-h-[2rem] bottom-0" 
+      className="absolute left-[8rem] md:left-[8.5rem] lg:left-[17rem] xl:left-[17rem] lg:max-h-[2rem] bottom-0" 
       pathClassName="fill-n-5"/>
     </div>
   );
@@ -28,7 +28,7 @@ export const PhotoChatMessage = () => {
 
 export const VideoChatMessage = () => {
   return (
-    <div className="absolute left-[18.125rem] top-14 sm: top-[5rem] sm: left-[5.9rem]  sm: max-h-[3rem] sm: max-w-[10rem] md:top-[10rem] md:left-[27rem] w-full max-w-[14rem] lg:top-[12rem] lg:left-[22.5rem] pt-2.5 pr-2.5 pb-7 pl-5 bg-n-6 rounded-t-xl rounded-br-xl font-code text-base md:max-w-[13.5rem]">
+    <div className="absolute left-[18.125rem] top-14 sm: top-[5rem] sm: left-[5.9rem]  sm: max-h-[3rem] sm: max-w-[11.8rem] md:top-[10rem] md:left-[27rem] w-full max-w-[14rem] lg:top-[12rem] lg:left-[22.5rem] pt-2.5 pr-2.5 pb-7 pl-5 bg-n-6 rounded-t-xl rounded-br-xl font-code text-base md:max-w-[13.5rem]">
       Looks good!
       <div className="absolute left-5 -bottom-[1.125rem] flex items-center justify-center w-[2.25rem] h-[2.25rem] bg-color-1 rounded-[0.75rem] sm: max-w-[2rem] sm: max-h-[2rem]">
         <img

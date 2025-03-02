@@ -9,8 +9,6 @@ import CarChilling from "./Featured/chilling on car.gif";
 import WalkingCrowd from "./Featured/crowd walking.gif";
 import deskman from "./Featured/man at desk.gif";
 import PlaceholderImage from "./Featured/PlaceholderImage.png";
-import { Walking } from "../About";
-import { title } from "framer-motion/client";
 
 export {
   chineseStore,

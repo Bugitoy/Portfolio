@@ -5,7 +5,7 @@ const TabsComponent = () => {
 
   return (
     <div className="w-full p-4">
-      <div className="flex space-x-0 lg:space-x-4 xl:space-x-4 text-[0.75rem] lg:text-base xl:text-base">
+      <div className="flex flex-row ml-0 lg:ml-[4rem] xl:ml-[4rem] space-x-0 lg:space-x-15 xl:space-x-15 text-[0.75rem] lg:text-base xl:text-base">
         <button
           className={`px-4 py-2 focus:outline-none ${
             activeTab === 0
@@ -47,7 +47,7 @@ const TabsComponent = () => {
           Experience
         </button>
       </div>
-      <div className="mt-4 flex flex-col items-center">
+      <div className="mt-4 flex flex-col items-center ml-0 lg:ml-[4rem] xl:ml-[4rem]">
         {activeTab === 0 && (
           <div>
             <h2 className="font-semibold text-[0.65rem] lg:text-base xl:text-base mb-4 text-center text-purple-200">ISSSA & BISSA Tennis Awards</h2>
@@ -78,7 +78,7 @@ const TabsComponent = () => {
         {activeTab === 1 && (
           <div>
             <h1 className="font-bold text-lg lg:text-2xl xl:text-2xl my-10 text-center text-purple-600">Black belt hayashi ha shito ryu karateka</h1>
-            <div className="flex flex-col items-center space-y-6 w-[20rem] lg:w-[30rem] xl:w-[30rem]">
+            <div className="flex flex-col items-center text-center space-y-6 w-[20rem] lg:w-[30rem] xl:w-[30rem]">
               <h2 className="font-bold text-md text-purple-200">All Styles Karate Development & Elite Championships in Pretoria, South Africa (2013) - age category: 7-9 years</h2>
                 <p>Kata - Gold Medal</p>
                 <p>Kumite - Bronze medal</p>

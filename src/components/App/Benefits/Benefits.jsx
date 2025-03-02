@@ -4,11 +4,12 @@ import Section from "../../Section";
 import Arrow from "../../../assets/App/Others/Arrow";
 import { GradientLight } from "./Design/Benefits";
 import ClipPath from "../../../assets/App/Others/ClipPath";
+import { clipPath } from "framer-motion/client";
 
 const Benefits = () => {
   return (
     <Section id="features">
-      <div className="container relative">
+      <div className="container relative z-2">
         <Heading
           className="md:max-w-md lg:max-w-3xl"
           title="Feeling like checking out some of my past blog posts?"
@@ -23,7 +24,7 @@ const Benefits = () => {
               }}
               key={item.id}
             >
-              <div className="relative z-1 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
+              <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem]">
                 <h5 className="h5 mb-5">{item.title}</h5>
                 <p className="body-2 mb-6 text-n-3">{item.text}</p>
                 <div className="flex items-center mt-auto">
@@ -45,6 +46,7 @@ const Benefits = () => {
 
               {item.light && <GradientLight />}
 
+              <div className="absolute inset-0 bg-conic-gradient" style={{ clipPath: 'url(#benefits)' }}/>
               <div
                 className="absolute inset-0.5 bg-n-8"
                 style={{ clipPath: "url(#benefits)" }}

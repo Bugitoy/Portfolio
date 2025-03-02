@@ -13,7 +13,7 @@ const Tabs = () => {
 
     return (
         <div className="container relative flex flex-col items-center justify-center z-2">
-            <div className="flex justify-center w-[26rem] h-[4rem] space-x-4 mb-8 sm: text-xs sm: flex-wrap gap-[5px]">
+            <div className="flex h-[2rem] lg:h-[4rem] justify-center text-xs lg:text-lg flex-wrap gap-[5px] mb-[2rem]">
                 <button 
                     onClick={() => setFilter("All")} 
                     className={`px-4 py-2 rounded-lg ${filter === "All" ? "bg-purple-600 text-white" : "bg-white text-black border border-gray-300"}`}

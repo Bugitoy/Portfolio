@@ -1,9 +1,7 @@
-import { curve, heroBackground, pixelguytalking } from "../../../assets/App";
-import Button from "../../Button";
+import { heroBackground } from "../../../assets/App";
 import Section from "../../Section";
 import { BackgroundCircles, BottomLine } from "../Hero/Design/HeroDesign";
 import { useRef } from "react";
-import CompanyLogos from "../../App/Hero/CompanyLogos/CompanyLogos";
 import RepeatedBlocks from "./Design/RepeatedBlocks";
 import ConnectedBlocks from "./Design/ConnectedBlocks";
 import AboutMeTabs from "../Hero/Design/AboutMeTabs";
@@ -22,21 +20,13 @@ const Experience = () => {
       id="hero"
     >
       <div className="container relative" ref={parallaxRef}>
-        {/*<div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
-          <h1 className="h1 mb-6">
-          </h1>
-          <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
-            An engineer with a tennis racket and a passion for soccer.
-          </p>
-        </div>*/}
-
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
             <div className="flex flex-col">
               <div className="flex flex-col xl:flex-row lg:flex-row gap-2">
                 <div className="flex-1 z-1">
                   <Passage />
                 </div>
-                <div className="flex-2 z-1 rounded-2xl w-full lg:w-[30rem] xl:w-[30rem]">
+                <div className="flex-1 z-1 rounded-2xl w-full">
                   <AboutMeTabs />
                 </div>
               </div>
@@ -76,7 +66,7 @@ const Experience = () => {
           </div>
         </div>
         <BackgroundCircles />
-        <div className="flex flex-col xl:flex-row lg:flex-row gap-7 space-between">
+        <div className="flex flex-col xl:flex-row lg:flex-row gap-7 space-between hidden lg:flex xl:flex">
           <div className="flex-1 z-1 w-full lg:w-[10rem] xl:w-[10rem] hover:transform hover:scale-105 transition-transform duration-300">
             <img
               src={City}

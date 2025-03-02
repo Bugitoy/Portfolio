@@ -365,7 +365,7 @@ export const benefits = [
   {
     id: "1",
     title: "Improve everyday",
-    text: "My goal with this website is to document my findings and weekly readings. By exploring a range of areas in my, I aim to build a habit of consistent learning, reflection, and growth.",
+    text: "By exploring a range of areas in my field of Computer Engineering, I aim to build a habit of consistent learning, reflection, and growth. Demonstrating my competence and passion for the field.",
     backgroundUrl: "./src/assets/benefits/card-2.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
