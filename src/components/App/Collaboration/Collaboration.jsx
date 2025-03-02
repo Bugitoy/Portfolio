@@ -29,7 +29,7 @@ const Collaboration = () => {
             ))}
           </ul>
           <Link to="/about">
-            <Button className={"ml-[6.5rem] lg:ml-[3rem]"}>Read about me</Button>
+            <Button className={"ml-[6.5rem] lg:ml-[3rem] mt-0 lg:mt-[1rem]"}>Read about me</Button>
           </Link>
         </div>
 
