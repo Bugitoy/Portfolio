@@ -40,8 +40,8 @@ const Featured = () => {
         <h1 className="text-[60px] z-1 font-light md:text-[45px] lg:text-[48px] lg:mt-[3rem] xl:text-[36px] leading-[4rem]">
             - Discover my stories and creative ideas -
         </h1>
-        <div className=" mt-[60px] lg:mb-[100px] xl:mb-[100px] flex items-center gap-[25px] flex-col lg:flex-row xl:flex-row">
-            <div className="relative flex-1">
+        <div className=" mt-[60px] lg:mb-[100px] xl:mb-[100px] flex items-center gap-[5px] flex-col lg:flex-row xl:flex-row">
+            <div className="relative flex-1 sm: mb-[20px] lg:px-[2rem] ">
                 <img
                     src={StreetCrossing}
                     className="h-[350px] w-full rounded-[2rem] object-cover"
@@ -50,7 +50,7 @@ const Featured = () => {
                     alt="Man crossing the street"
                     />
             </div>
-            <div className="z-1 flex flex-1 flex-col gap-[20px] sm: items-center sm: text-center">
+            <div className="z-1 flex flex-1 flex-col gap-[20px] sm:items-center sm:text-center lg:text-justify lg:items-center lg:px-[1rem]">
                 <h1 className="text-[20px]">Lorem ipsum dolor sit amet alim consectetur adipisicing elit.</h1>
                 <p className="text-[15px] font-light text-gray-500">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
