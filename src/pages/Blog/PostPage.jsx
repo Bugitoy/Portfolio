@@ -50,7 +50,7 @@ const PostPage = () => {
           style={oneDark}
           customStyle={{ padding: '10px' }}
           wrapLongLines={true}
-          className="text-xs lg:text-sm xl:text-sm"
+          className="text-[0.5rem] lg:text-sm xl:text-sm"
         >
           {children}
         </SyntaxHighlighter>

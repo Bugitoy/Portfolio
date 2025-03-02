@@ -50,7 +50,7 @@ const Featured = () => {
                     alt="Man crossing the street"
                     />
             </div>
-            <div className="z-1 flex flex-1 flex-col gap-[20px] sm:items-center sm:text-center lg:text-justify lg:items-center lg:px-[1rem]">
+            <div className="z-1 flex flex-1 flex-col gap-[20px] sm: items-center sm: text-center lg:text-justify lg:items-center lg:px-[1rem]">
                 <h1 className="text-[20px]">Lorem ipsum dolor sit amet alim consectetur adipisicing elit.</h1>
                 <p className="text-[15px] font-light text-gray-500">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.

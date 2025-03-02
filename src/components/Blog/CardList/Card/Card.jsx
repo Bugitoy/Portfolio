@@ -57,7 +57,7 @@ const Card = () => {
               <div className="flex justify-center lg:justify-start xl:justify-start">
                 <Link
                   to={`/post/${post.slug}`}
-                  className="border-b-2 border-gray-400 text-[12px] w-max hover:border-gray-600 transition-all"
+                  className="border-b-2 border-gray-400 text-[12px] w-max hover:border-gray-600 transition-all mb-[2rem]"
                 >
                   Read More
                 </Link>

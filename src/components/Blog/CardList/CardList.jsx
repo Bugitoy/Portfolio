@@ -12,7 +12,7 @@ const CardList = () => {
       id="hero"
     >
       <div className="container relative">
-        <h1 className="my-[50px] text-3xl ml-[0] sm: mx-auto sm: text-center md: mx-auto md: text-center 
+        <h1 className="mb-[60px] mt-[-50px] lg:mt-[0] lg:mb-[30px] text-3xl ml-[0] sm: mx-auto sm: text-center md: mx-auto md: text-center 
                       lg:ml-[65px] lg:text-left">
           Recent Posts
         </h1>
