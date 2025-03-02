@@ -21,7 +21,7 @@ const Card = () => {
         return (
           <div
             key={post.slug}
-            className="container relative flex flex-col lg:flex-row gap-[50px] sm:mb-[30px] text-center lg:text-left xl:text-left"
+            className="container relative flex flex-col lg:flex-row gap-[30px] lg:gap-[50px] sm:mb-[30px] text-center lg:text-left xl:text-left"
           >
             {/* Image div */}
             <div className="flex-1 h-[250px] relative">
