@@ -30,7 +30,7 @@ export const posts = [
     image: remembering,
     date: '11.02.2023',
     category: 'Breadboard',
-    description: 'This is the first post description. A quick summary of the content.',
+    description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.',
     body1: `Here is a long description of the first post. It includes various types of content such as text, images, and code snippets.`,
     body2: 'This is the second part of the first post.',
     body3: 'This is the third part of the first post.',
@@ -47,7 +47,7 @@ export const posts = [
     image: TennisMan,
     date: '12.02.2023',
     category: 'Tutorial',
-    description: 'A brief overview of the second post content.',
+    description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.',
     body: `Here is a long description of the second post. It includes various types of content such as text, images, and code snippets.`
   },
   {
@@ -56,7 +56,7 @@ export const posts = [
     image: WalkingCrowd,
     date: '13.02.2023',
     category: 'Update',
-    description: 'An update on the third post with mixed media content.',
+    description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.',
     body: `Here is a long description of the third post. It includes various types of content such as text, images, and code snippets.`
   },
   {
@@ -65,25 +65,25 @@ export const posts = [
     image: twospaceman,
     date: '14.02.2023',
     category: 'Update',
-    description: 'An update on the fourth post with mixed media content.',
+    description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.',
     body: `Here is a long description of the fourth post. It includes various types of content such as text, images, and code snippets.`
   },
-    {
-        title: 'Fifth Post',
-        slug: 'fifth-post',
-        image: CarChilling,
-        date: '15.02.2023',
-        category: 'Update',
-        description: 'An update on the fifth post with mixed media content.',
-        body: `Here is a long description of the fifth post. It includes various types of content such as text, images, and code snippets.`
-    },
+  {
+    title: 'Fifth Post',
+    slug: 'fifth-post',
+    image: CarChilling,
+    date: '15.02.2023',
+    category: 'Update',
+    description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    body: `Here is a long description of the fifth post. It includes various types of content such as text, images, and code snippets.`
+  },
     {
         title: 'Sixth Post',
         slug: 'sixth-post',
         image: Vibing,
         date: '16.02.2023',
         category: 'Update',
-        description: 'An update on the sixth post with mixed media content.',
+        description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.',
         body: `Here is a long description of the sixth post. It includes various types of content such as text, images, and code snippets.`
     },
     {
@@ -92,7 +92,7 @@ export const posts = [
         image: deskman,
         date: '17.02.2023',
         category: 'Update',
-        description: 'An update on the seventh post with mixed media content.',
+        description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.',
         body: `Here is a long description of the seventh post. It includes various types of content such as text, images, and code snippets.`
     },
 ];

@@ -31,35 +31,39 @@ const PostPage = () => {
     );
   };
 
-  const CodeBlockComponent = ({ language, children, fontSize = 'text-base', marginBottom = 'mb-4' }) => {
+  const CodeBlockComponent = ({ language, children, marginBottom = 'mb-4' }) => {
     const [copy, setCopy] = useState(false);
     return (
-      <div className={`w-full bg-[#282C34] rounded-xl overflow-hidden ${marginBottom}`}>
-        <div className='flex bg-[#1d2025] justify-end pb-3 pt-4 px-6'>
-          {
-            copy?
-            <button className='text-white'>
-              Copied
-            </button>
-            :
-            <button className='text-white' onClick={() => {
-                navigator.clipboard.writeText({children});
+      <div className={`w-full bg-[#282C34] rounded-lg overflow-hidden ${marginBottom}`}>
+        <div className="flex bg-[#1d2025] justify-end pb-2 pt-2 px-4">
+          {copy ? (
+            <button className="text-white text-xs sm:text-xs lg:text-md">Copied</button>
+          ) : (
+            <button
+              className="text-white text-xs sm:text-xs lg:text-md"
+              onClick={() => {
+                navigator.clipboard.writeText(children);
                 setCopy(true);
-                setTimeout(() => {
-                  setCopy(false);
-                }, 1500);
-            }}>
+                setTimeout(() => setCopy(false), 1500);
+              }}
+            >
               Copy
             </button>
-          }
+          )}
         </div>
-        <SyntaxHighlighter language={language} style={oneDark} customStyle={{padding: '16px', fontSize }} wrapLongLines={true}>
+        <SyntaxHighlighter
+          language={language}
+          style={oneDark}
+          customStyle={{ padding: '16px'}}
+          className="text-[0.7rem] lg:text-base xl:text-lg"
+          wrapLongLines={true}
+        >
           {children}
         </SyntaxHighlighter>
       </div>
     );
   };
-
+  
   if (!post) {
     return <div className="min-h-screen flex items-center justify-center text-gray-500">Post not found</div>;
   }
@@ -73,7 +77,7 @@ const PostPage = () => {
 
         <h1 className="text-3xl font-bold mb-5">{post.title}</h1>
         
-        {post.description && <p className="mb-5 text-gray-700">{post.description}</p>}
+        {post.description && <p className="mb-5  sm: text-xs lg: text-lg xl:text-lg text-gray-700">{post.description}</p>}
 
         <div className="prose max-w-none">
           <p className="mb-5">{post.body1}</p>
@@ -82,7 +86,7 @@ const PostPage = () => {
 
           <p className="mb-5">{post.body2}</p>
           
-          <CodeBlockComponent language="jsx" fontSize="text-lg" marginBottom="mb-6">
+          <CodeBlockComponent language="jsx" marginBottom="mb-6">
             {`function greet() { console.log("Hello, world!"); } greet();`}
           </CodeBlockComponent>
 
@@ -96,7 +100,7 @@ const PostPage = () => {
 
           <p className="mb-5">{post.body5}</p>
           
-          <CodeBlockComponent language="jsx" fontSize="text-lg" marginBottom="mb-6">
+          <CodeBlockComponent language="jsx" marginBottom="mb-6">
           {`let randomNumber = Math.random();\nconsole.log(randomNumber); // Output: a random number between 0 and 1`}
           </CodeBlockComponent>
 
@@ -111,7 +115,7 @@ const PostPage = () => {
 
           <p className="mb-5">{post.body8}</p>
           
-          <CodeBlockComponent language="jsx" fontSize="text-lg" marginBottom="mb-6">
+          <CodeBlockComponent language="jsx" marginBottom="mb-6">
             {`function greet() { console.log("Hello, world!"); } greet();`}
           </CodeBlockComponent>
 
