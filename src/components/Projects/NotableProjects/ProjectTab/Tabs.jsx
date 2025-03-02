@@ -13,7 +13,7 @@ const Tabs = () => {
 
     return (
         <div className="container relative flex flex-col items-center justify-center z-2">
-            <div className="flex justify-center w-full h-[4rem] space-x-4 mb-8 sm: text-xs sm: flex-wrap gap-[5px]">
+            <div className="flex justify-center w-[26rem] h-[4rem] space-x-4 mb-8 sm: text-xs sm: flex-wrap gap-[5px]">
                 <button 
                     onClick={() => setFilter("All")} 
                     className={`px-4 py-2 rounded-lg ${filter === "All" ? "bg-purple-600 text-white" : "bg-white text-black border border-gray-300"}`}
@@ -38,12 +38,12 @@ const Tabs = () => {
                 >
                     Electric Circuits
                 </button>
-                <button 
+                {/*<button 
                     onClick={() => setFilter("Politics, History and Articles")} 
                     className={`px-4 py-2 rounded-lg ${filter === "Politics, History and Articles" ? "bg-purple-600 text-white" : "bg-white text-black border border-gray-300"}`}
                 >
                     Politics, History and Articles
-                </button>
+                </button>*/}
             </div>
             <div className="relative grid gap-6 md:grid-cols-2 mb-[10rem] md:gap-4 md:pb-[7rem] sm: mt-[2rem]">
 
