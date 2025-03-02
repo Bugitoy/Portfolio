@@ -94,13 +94,13 @@ const TabsComponent = () => {
           </div>
         )}
         {activeTab === 2 && (
-          <div className="flex flex-col items-center space-y-4 w-[20rem] lg:w-[40rem] xl:w-[40rem]">
-            <h2 className="font-semibold my-5 text-center text-purple-200">Baobab Primary School</h2>
+          <div className="flex flex-col items-center text-center space-y-4 w-[20rem] lg:w-[40rem] xl:w-[40rem]">
+            <h2 className="font-semibold my-5 text-purple-200">Baobab Primary School</h2>
               <p>Baobab's Inter House Competitions, 2015 - Position 3 (Under 10 long jump)</p>
               <p>Baobab's Inter House Competitions, 2015 - Position 1 (Under 10 high jump)</p>
               <p>Baobab's Inter House Competitions, 2017 - Position 1 (Under 12 high jump)</p>
               <p>Baobab's Inter House Competitions, 2017 - Position 2 (Under 12 long jump)</p>
-            <h2 className="font-semibold my-5 text-center text-purple-200">Legae Academy</h2>
+            <h2 className="font-semibold my-5 text-purple-200">Legae Academy</h2>
               <p>Legae Academy's Inter House Events, 2019 - Position 2 (Under 15 high jump)</p>
               <p>Legae Academy's Inter House Events, 2022 - Position 3 (Under 19 high jump)</p>
               <p>Legae's Inter House Events, 2023 - Position 2 (Under 19 800m)</p>
@@ -112,7 +112,7 @@ const TabsComponent = () => {
         )}
         {activeTab === 3 && (
             <div className="flex flex-col text-center space-y-4 w-[20rem] lg:w-[35rem] xl:w-[35rem]">
-              <h2 className="font-semibold text-center text-purple-200">BothoHacks</h2>
+              <h2 className="font-semibold text-purple-200">BothoHacks</h2>
               <p>Participated in my first ever hackathon</p>
               <p>Collaborated with 3 other university students as a highschooler</p>
               <p>Utilised an Arduino Uno R3 as well as Html, Css & Javascript</p>
