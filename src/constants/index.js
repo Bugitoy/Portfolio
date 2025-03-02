@@ -92,7 +92,7 @@ export const companyLogos = [nodejslogo, reactjslogo, typescriptlogo, javascript
 export const programmingHub = [
   "C++ advanced programming certificate",
   "Javascript advanced programming certificate",
-  "c# programming certificate"
+  "C# programming certificate"
 ]
 
 export const microsoftLearn = [

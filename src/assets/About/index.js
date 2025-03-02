@@ -9,6 +9,9 @@ import StarGazing from "./Experience/StarGazing.png";
 import City from "./Experience/City.png";
 import Railway from "./Experience/Railway.png";
 import Coast from "./Experience/Coast.png";
+import deskKid from "./Experience/deskKid.jpg";
+import Forest from "./Experience/Forest.png";
+import Atlantis from "./Experience/Atlantis.png";
 
 import AfricanCoder from "./Features/AfricanCoder.jpg";
 import BadCity from "./Features/BadCity.png";
@@ -47,4 +50,7 @@ export {
     pixelman,
     futuristiccity,
     SomethingHere,
+    deskKid,
+    Forest,
+    Atlantis
 };

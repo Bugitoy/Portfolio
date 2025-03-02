@@ -2,7 +2,7 @@ import React from 'react';
 import Section from "../../Section";
 import Heading from "../../Heading";
 import {check} from "../../../assets/App";
-import { AfricanCoder, BadCity, CityTop, DesertVillage, Jupiter, NightCoding, OfficeCoder, pinkTerrain, PixelArtClassroom, SadRobot, StarWarsWalker, StreetWalk} from "../../../assets/About";
+import { AfricanCoder, deskKid, BadCity, CityTop, Atlantis ,DesertVillage, Jupiter, Forest, OfficeCoder, pinkTerrain, PixelArtClassroom, SadRobot, StarWarsWalker, StreetWalk} from "../../../assets/About";
 import { programmingHub, microsoftLearn, freeCodeCamp, codingX } from "../../../constants";
 import { Gradient } from "../../App/Services/Design/Services";
 
@@ -82,10 +82,10 @@ const Features = () => {
           </div>
 
           <div className="relative z-1 grid gap-5 lg:grid-cols-2">
-            <div className="relative sm: min-h-[44rem] md: min-h-[39rem] lg: min-h-[39rem] xl: min-h-[39rem] border border-n-1/10 overflow-hidden">
+            <div className="relative min-h-[39rem] border border-n-1/10 overflow-hidden">
               <div className="absolute inset-5 mb-[0rem]">
                 <img
-                  src={AfricanCoder}
+                  src={deskKid}
                   className="h-full w-full ml-[0rem] rounded-[2rem]"
                   width={630}
                   height={750}
@@ -93,7 +93,7 @@ const Features = () => {
                 />
               </div>
 
-              <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg: p-15">
+              <div className="absolute inset-0 flex flex-col justify-end p-8 lg:p-[3rem] bg-gradient-to-b from-n-8/0 to-n-8/90">
                 <h4 className="h4 ml-[1rem] mb-4 lg: w-full sm: text-[1.55rem]">Senior Member of the Advocates for Red Cross Committee</h4>
                 <ul className="pl-3 text-white sm: text-sm">
                   <li className="mb-2">
@@ -118,7 +118,7 @@ const Features = () => {
             <div className="grid grid-cols-9 gap-2 p-6 border border-n-1/10 overflow-hidden">
               <div className="transform hover:scale-105 transition duration-300 hover:rounded-[3rem] col-span-1 row-span-1 hover rounded-tl-[1rem]">
                 <img
-                  src={NightCoding}
+                  src={Forest}
                   className="h-full w-full object-cover rounded-tl-[1rem]"
                   width={630}
                   height={750}
@@ -127,8 +127,8 @@ const Features = () => {
               </div>
               <div className="transform hover:scale-105 transition duration-300 hover:rounded-[3rem] col-span-5 row-span-1">
                 <img
-                  src={OfficeCoder}
-                  className="h-full w-full object-cover rounded-tr-[1rem]"
+                  src={SadRobot}
+                  className="h-full w-full object-cover"
                   width={630}
                   height={750}
                   alt="Office coder"
@@ -145,7 +145,7 @@ const Features = () => {
               </div>
               <div className="transform hover:scale-105 transition duration-300 hover:rounded-[3rem] col-span-2 row-span-2">
                 <img
-                  src={PixelArtClassroom}
+                  src={AfricanCoder}
                   className="h-full w-full object-cover"
                   width={630}
                   height={750}
@@ -181,7 +181,7 @@ const Features = () => {
               </div>
               <div className="transform hover:scale-105 transition duration-300 hover:rounded-[3rem] col-span-1 row-span-3">
                 <img
-                  src={Jupiter}
+                  src={OfficeCoder}
                   className="h-full w-full object-cover"
                   width={630}
                   height={750}
@@ -190,7 +190,7 @@ const Features = () => {
               </div>
               <div className="transform hover:scale-105 transition duration-300 hover:rounded-[3rem] col-span-2 row-span-2">
                 <img
-                  src={SadRobot}
+                  src={Jupiter}
                   className="h-full w-full object-cover"
                   width={630}
                   height={750}
@@ -199,7 +199,7 @@ const Features = () => {
               </div>
               <div className="transform hover:scale-105 transition duration-300 hover:rounded-[3rem] col-span-4 row-span-4">
                 <img
-                  src={StarWarsWalker}
+                  src={PixelArtClassroom}
                   className="h-full w-full object-cover rounded-bl-[1rem]"
                   width={630}
                   height={750}
@@ -208,7 +208,7 @@ const Features = () => {
               </div>
               <div className="transform hover:scale-105 transition duration-300 hover:rounded-[3rem] col-span-5 row-span-3">
                 <img
-                  src={StreetWalk}
+                  src={Atlantis}
                   className="h-full w-full object-cover rounded-br-[1rem]"
                   width={630}
                   height={750}
