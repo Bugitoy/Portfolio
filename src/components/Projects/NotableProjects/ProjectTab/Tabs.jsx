@@ -1,7 +1,4 @@
 import { useState } from "react";
-import Button from "../../../Button";
-import Heading from "../../../Heading";
-import Section from "../../../Section";
 import Tagline from "../../../Tagline";
 import { PaginationList } from "../../../../constants";
 import { check2, grid, loading1 } from "../../../../assets/App";
@@ -16,36 +13,36 @@ const Tabs = () => {
 
     return (
         <div className="container relative flex flex-col items-center justify-center z-2">
-            <div className="flex justify-center w-full h-[4rem] space-x-4 mb-8 sm: text-xs sm: flex-wrap">
+            <div className="flex justify-center w-full h-[4rem] space-x-4 mb-8 sm: text-xs sm: flex-wrap gap-[5px]">
                 <button 
                     onClick={() => setFilter("All")} 
-                    className={`px-4 py-2 rounded-2xl ${filter === "All" ? "bg-purple-600 text-white" : "bg-white text-black border border-gray-300"}`}
+                    className={`px-4 py-2 rounded-lg ${filter === "All" ? "bg-purple-600 text-white" : "bg-white text-black border border-gray-300"}`}
                 >
                     All
                 </button>
                 <button 
                     onClick={() => setFilter("AI and Machine Learning")} 
-                    className={`px-4 py-2 rounded-2xl ${filter === "AI and Machine Learning" ? "bg-purple-600 text-white" : "bg-white text-black border border-gray-300"}`}
-                >
-                    Computer Graphics
-                </button>
-                <button 
-                    onClick={() => setFilter("Computer Graphics")} 
-                    className={`px-4 py-2 rounded-2xl ${filter === "Computer Graphics" ? "bg-purple-600 text-white" : "bg-white text-black border border-gray-300"}`}
+                    className={`px-4 py-2 rounded-lg ${filter === "AI and Machine Learning" ? "bg-purple-600 text-white" : "bg-white text-black border border-gray-300"}`}
                 >
                     AI and Machine Learning 
                 </button>
                 <button 
+                    onClick={() => setFilter("Computer Graphics")} 
+                    className={`px-4 py-2 rounded-lg ${filter === "Computer Graphics" ? "bg-purple-600 text-white" : "bg-white text-black border border-gray-300"}`}
+                >
+                    Computer Graphics 
+                </button>
+                <button 
                     onClick={() => setFilter("Electric Circuits")} 
-                    className={`px-4 py-2 rounded-2xl ${filter === "Electric Circuits" ? "bg-purple-600 text-white" : "bg-white text-black border border-gray-300"}`}
+                    className={`px-4 py-2 rounded-lg ${filter === "Electric Circuits" ? "bg-purple-600 text-white" : "bg-white text-black border border-gray-300"}`}
                 >
                     Electric Circuits
                 </button>
                 <button 
                     onClick={() => setFilter("Politics, History and Articles")} 
-                    className={`px-4 py-2 rounded-2xl ${filter === "Politics, History and Articles" ? "bg-purple-600 text-white" : "bg-white text-black border border-gray-300"}`}
+                    className={`px-4 py-2 rounded-lg ${filter === "Politics, History and Articles" ? "bg-purple-600 text-white" : "bg-white text-black border border-gray-300"}`}
                 >
-                    Articles
+                    Politics, History and Articles
                 </button>
             </div>
             <div className="relative grid gap-6 md:grid-cols-2 mb-[10rem] md:gap-4 md:pb-[7rem] sm: mt-[2rem]">

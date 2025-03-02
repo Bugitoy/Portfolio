@@ -1,12 +1,6 @@
-import { curve, heroBackground, pixelguytalking } from "../../../assets/App";
-import Button from "../../Button";
+import { curve, pixelguytalking } from "../../../assets/App";
 import Section from "../../Section";
-import { BackgroundCircles, BottomLine } from "../../About/Hero/Design/HeroDesign";
 import { useRef } from "react";
-import CompanyLogos from "../../App/Hero/CompanyLogos/CompanyLogos";
-import RenderRepeatedBlocks from "../../About/Experience/Design/RepeatedBlocks";
-import AboutMeTabs from "../../About/Hero/Design/AboutMeTabs";
-import Passage from "../../About/Hero/Design/Passage";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
