@@ -86,7 +86,7 @@ const Tabs = () => {
 
                                     <div className="my-5 -mx-15">
                                         <img
-                                            className="w-full"
+                                            className="w-full mb-0 lg:mb-15"
                                             src={item.imageUrl}
                                             width={628}
                                             height={426}
