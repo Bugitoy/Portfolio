@@ -45,7 +45,7 @@ const Tabs = () => {
                     Politics, History and Articles
                 </button>*/}
             </div>
-            <div className="relative grid gap-6 md:grid-cols-2 mb-[10rem] md:gap-4 md:pb-[7rem] sm: mt-[2rem]">
+            <div className="relative grid gap-6 md:grid-cols-2 mb-[2rem] md:gap-4 md:pb-[7rem] sm: mt-[2rem]">
 
                 {filteredList.map((item) => {
                     const status = item.status === "done" ? "Done" : "In progress";
@@ -70,9 +70,9 @@ const Tabs = () => {
 
                                 <div className="relative z-1">
                                     <div className="flex items-center justify-between max-w-[27rem] mb-8 md:mb-20">
-                                        <Tagline>{item.date}</Tagline>
+                                        <Tagline className={"text-[0.6rem] lg:text-base"}>{item.date}</Tagline>
 
-                                        <div className="flex items-center px-4 py-1 bg-n-1 rounded text-n-8">
+                                        <div className="flex items-center px-1 lg:p-2 py-1 bg-n-1 rounded text-n-8">
                                             <img
                                                 className="mr-2.5"
                                                 src={item.status === "done" ? check2 : loading1}
@@ -80,11 +80,11 @@ const Tabs = () => {
                                                 height={16}
                                                 alt={status}
                                             />
-                                            <div className="tagline">{status}</div>
+                                            <div className="tagline text-[0.6rem] lg:text-base">{status}</div>
                                         </div>
                                     </div>
 
-                                    <div className="mb-10 -my-10 -mx-15">
+                                    <div className="my-5 -mx-15">
                                         <img
                                             className="w-full"
                                             src={item.imageUrl}
@@ -94,7 +94,7 @@ const Tabs = () => {
                                         />
                                     </div>
                                     
-                                    <h4 className="h4 mb-4">{item.title}</h4>
+                                    <h4 className="text-md lg:h4 mb-4">{item.title}</h4>
                                     <p className="body-2 text-n-4">{item.text}</p>
                                 </div>
                             </div>
