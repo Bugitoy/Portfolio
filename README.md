@@ -807,3 +807,14 @@ export default Roadmap;
 - [Design](https://drive.google.com/file/d/15WJMOchujvaQ7Kg9e0nGeGR7G7JOeX1K/view?usp=sharing)
 - [Absolute Relative Positioning](https://css-tricks.com/absolute-positioning-inside-relative-positioning/)
 
+Screenshots of the website:
+
+<img width="1895" height="926" alt="Screenshot 2025-08-26 072416" src="https://github.com/user-attachments/assets/99a81ff0-ea0d-4bf7-b3fa-737427ff56c6" />
+<img width="1896" height="930" alt="Screenshot 2025-08-26 072445" src="https://github.com/user-attachments/assets/f796f474-efb4-4266-8532-786ce5be7674" />
+<img width="1900" height="929" alt="Screenshot 2025-08-26 072512" src="https://github.com/user-attachments/assets/1fa5e964-fd5e-4b6e-8b16-bb9fda3c03f5" />
+<img width="1897" height="925" alt="Screenshot 2025-08-26 072543" src="https://github.com/user-attachments/assets/7ce5114d-5e97-466c-87d2-0a3a6377abc8" />
+<img width="1897" height="927" alt="Screenshot 2025-08-26 072602" src="https://github.com/user-attachments/assets/950138a9-9283-47b2-a487-b99dda3e29b7" />
+<img width="1899" height="926" alt="Screenshot 2025-08-26 072716" src="https://github.com/user-attachments/assets/d1bd7a40-d507-4d84-963f-566aab523372" />
+<img width="1896" height="928" alt="Screenshot 2025-08-26 072637" src="https://github.com/user-attachments/assets/d717a975-b2c3-424b-83bc-c0222077d2e5" />
+<img width="1899" height="927" alt="Screenshot 2025-08-26 072746" src="https://github.com/user-attachments/assets/58513900-ba3e-4e24-a950-341902e4a372" />
+
