@@ -7,7 +7,7 @@ import { useLocation } from 'react-router-dom';
 export default function ProjectsPost() {
   // Track which code lines are expanded (per-file)
   const [expandedLines, setExpandedLines] = useState({});
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [expandedFolders, setExpandedFolders] = useState({});
   const [selectedFile, setSelectedFile] = useState('forLoop');
   const location = useLocation();
@@ -102,7 +102,7 @@ export default function ProjectsPost() {
       {/* Toggle Sidebar Button */}
       <button
         onClick={() => setSidebarOpen(!sidebarOpen)}
-        className={`absolute top-1/2 -translate-y-1/2 bg-slate-900 border border-slate-700 p-2 hover:bg-n-8 transition-all duration-300 text-slate-400 hover:text-white rounded-lg z-50 ${sidebarOpen ? 'left-[calc(7.7rem-12px)] md:left-[calc(16rem-12px)]' : '-left-3'}`}
+        className={`absolute top-1/2 -translate-y-1/2 bg-slate-900 border border-slate-700 p-1 md:p-2 hover:bg-n-8 transition-all duration-300 text-slate-400 hover:text-white rounded-lg z-50 ${sidebarOpen ? 'left-[calc(7.7rem-12px)] md:left-[calc(16rem-12px)]' : '-left-3'}`}
       >
         <ChevronRight
           size={20}
