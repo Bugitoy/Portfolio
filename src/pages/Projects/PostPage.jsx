@@ -74,7 +74,7 @@ export default function ProjectsPost() {
                     expandedFolders[folderName] ? 'rotate-90' : ''
                   }`}
                 />
-                <span className="text-[10px] md:text-sm truncate" title={folderName}>{folderName}</span>
+                <span className="text-[8px] md:text-sm truncate" title={folderName}>{folderName}</span>
               </button>
 
               {expandedFolders[folderName] && (
@@ -83,14 +83,14 @@ export default function ProjectsPost() {
                     <button
                       key={fileKey}
                       onClick={() => handleFileSelect(fileKey)}
-                      className={`w-full flex items-center gap-2 px-2 py-1 rounded text-[9px] md:text-sm transition-colors min-w-0 overflow-hidden ${
+                      className={`w-full flex items-center gap-2 px-2 py-1 rounded text-[7px] md:text-sm transition-colors min-w-0 overflow-hidden ${
                         selectedFile === fileKey
                           ? 'bg-purple-600 bg-opacity-40 border border-purple-500 text-purple-100'
                           : 'text-slate-400 hover:text-slate-200 hover:bg-purple-950'
                       }`}
                     >
                       <FileCode size={8} hidden md:block md:size={12} />
-                      <span className="text-[9px] md:text-xs truncate" title={file.title}>{file.title}</span>
+                      <span className="text-[7px] md:text-xs truncate" title={file.title}>{file.title}</span>
                     </button>
                   ))}
                 </div>
@@ -138,8 +138,8 @@ export default function ProjectsPost() {
                         >
                     <div className={`flex items-center gap-3 px-4 py-3 font-mono text-xs md:text-sm transition-all min-w-0 overflow-hidden ${
                             expandedLines[lineIdx]
-                            ? 'bg-slate-950 bg-opacity-30 text-slate-200 hover:bg-opacity-70 hover:border-slate-500 text-blue-100'
-                            : 'bg-slate-950 bg-opacity-50 text-slate-200 hover:bg-opacity-70 hover:border-slate-500'
+                            ? 'bg-opacity-30 text-slate-200 hover:bg-opacity-70 hover:border-slate-500 text-blue-100'
+                            : 'bg-opacity-50 text-slate-200 hover:bg-opacity-70 hover:border-slate-500'
                         }`}
                     >
                     <code className="truncate block text-[0.65rem] md:text-sm">{lineItem.code}</code>
@@ -171,7 +171,7 @@ export default function ProjectsPost() {
           )}
 
           {/* Instructions */}
-          <div className="mt-12 bg-purple-950 bg-opacity-50 border border-slate-600 rounded-lg p-6">
+          <div className="mt-12 bg-slate-900 bg-opacity-50 border border-slate-600 rounded-lg p-6">
             <h2 className="text-white font-semibold mb-3 text-[0.75rem] md:text-sm">How to use:</h2>
             <ul className="text-slate-300 space-y-2 text-[0.65rem] md:text-sm">
               <li className="leading-tight">Use the sidebar on the left to browse file directories</li>
