@@ -2487,8 +2487,8 @@ const ScheduleItem = ({ title, date, project }) => {
     >
       <div>
           <p className="mb-1.5 text-xs lg:text-xl text-zinc-50">{title}</p>
-          <p className="text-[0.65rem] lg:text-sm uppercase text-zinc-500">{date}</p>
-          <p className="text-[0.65rem] lg:text-sm uppercase text-purple-200 leading-tight break-words">Project: {project}</p>
+          <p className="lg:mt-2 text-[0.65rem] lg:text-sm uppercase text-zinc-500">{date}</p>
+          <p className="lg:mt-2 text-[0.65rem] lg:text-sm uppercase text-purple-200 leading-tight break-words">Project: {project}</p>
       </div>
     </motion.div>
   );

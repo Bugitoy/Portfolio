@@ -172,12 +172,13 @@ export const PaginationTitles = [
 export const PaginationList = [
   {
     id: "0",
-    title: "AI and Machine Learning",
-    text: "I'm continously deepening my knowledge on AI, learning higher level mathematics, generative models, and many more.",
+    title: "GPT-Style-transfomer model",
+    text: "Small GPT-style Transformer for character-level language modeling with contextual understanding up to block_size",
     date: "January",
     status: "Done",
     imageUrl: roadmap1,
     colorful: true,
+    slug: "gpt-style-transformer-model",
   },
   {
     id: "1",
