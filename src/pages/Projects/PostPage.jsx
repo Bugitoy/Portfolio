@@ -116,12 +116,12 @@ export default function ProjectsPost() {
         <div className="max-w-4xl">
           <div className="mb-8">
             <div className="mb-2">
-              <div className="text-xs md:text-sm text-slate-400 truncate" title={selectedFile}>
+              <div className="text-[0.50rem] md:text-sm text-slate-400 truncate" title={selectedFile}>
                 {currentFile ? currentFile.title : selectedFile}
               </div>
             </div>
             <h1 className="text-2xl md:text-4xl font-bold text-white mb-2">Code Explorer</h1>
-            <p className="text-[0.65rem] md:text-sm text-slate-400 ">Click on any line of code to see a breakdown of its components</p>
+            <p className="text-[0.60rem] md:text-sm text-slate-400 leading-tight">Click on any line of code to see a breakdown of its components</p>
           </div>
 
           {currentFile && (
