@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { ChevronDown, ChevronRight, FileCode, Folder, FolderOpen } from 'lucide-react';
 import Header from "../../components/App/Header/Header";
-import { fileSystem } from '../../assets/Projects';
+import { projects } from '../../assets/Projects';
+import { useLocation } from 'react-router-dom';
 
 export default function ProjectsPost() {
   // Track which code lines are expanded (per-file)
@@ -9,6 +10,13 @@ export default function ProjectsPost() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [expandedFolders, setExpandedFolders] = useState({});
   const [selectedFile, setSelectedFile] = useState('forLoop');
+  const location = useLocation();
+
+  // Determine selected project from query param `id` (falls back to first project)
+  const params = new URLSearchParams(location.search);
+  const projectId = params.get('id');
+  const project = projects.find(p => p.id === projectId || p.slug === projectId) || projects[0];
+  const fileSystem = project.fileSystem;
 
   const toggleFolder = (folderName) => {
     setExpandedFolders(prev => ({
@@ -23,7 +31,7 @@ export default function ProjectsPost() {
     setExpandedLines({});
   };
 
-  // Find the selected file
+  // Find the selected file within the currently selected project's filesystem
   let currentFile = null;
   for (const folder in fileSystem) {
     if (fileSystem[folder].files[selectedFile]) {
@@ -40,48 +48,48 @@ export default function ProjectsPost() {
       {/* Floating Sidebar */}
       <div
         className={`${
-          sidebarOpen ? 'w-64' : 'w-0'
+          sidebarOpen ? 'w-[8rem] md:w-64' : 'w-0'
         } transition-all duration-300 bg-slate-950 border-r border-slate-700 overflow-hidden flex flex-col relative`}
       >
       
-          <h2 className=" p-8 pb-2 text-white font-semibold text-lg">Files</h2>
+          <h2 className=" p-4 pb-2 text-white font-semibold text-[11px] md:text-lg">Files</h2>
 
 
         <div className="flex-1 overflow-y-auto p-4">
           {Object.entries(fileSystem).map(([folderName, folder]) => (
             <div key={folderName} className="mb-2">
-              <button
+                <button
                 onClick={() => toggleFolder(folderName)}
-                className="w-full flex items-center gap-2 px-3 py-2 mb-1 rounded hover:bg-purple-950 transition-colors text-slate-200 hover:text-white"
+                className="w-full flex items-center gap-2 px-2 py-1 mb-1 rounded hover:bg-purple-950 transition-colors text-slate-200 hover:text-white min-w-0 overflow-hidden"
               >
                 {expandedFolders[folderName] ? (
-                  <FolderOpen size={18} className="text-purple-400" />
+                  <FolderOpen size={10} md:size={16} className="text-purple-400" />
                 ) : (
-                  <Folder size={18} className="text-slate-400" />
+                  <Folder size={10} md:size={16} className="text-slate-400" />
                 )}
                 <ChevronRight
-                  size={16}
+                  size={10} md:size={16}
                   className={`transition-transform ${
                     expandedFolders[folderName] ? 'rotate-90' : ''
                   }`}
                 />
-                <span className="text-sm">{folderName}</span>
+                <span className="text-[10px] md:text-sm truncate" title={folderName}>{folderName}</span>
               </button>
 
               {expandedFolders[folderName] && (
-                <div className="ml-4 space-y-1">
+                <div className="ml-2 space-y-1">
                   {Object.entries(folder.files).map(([fileKey, file]) => (
                     <button
                       key={fileKey}
                       onClick={() => handleFileSelect(fileKey)}
-                      className={`w-full flex items-center gap-2 px-3 py-2 rounded text-sm transition-colors whitespace-nowrap ${
+                      className={`w-full flex items-center gap-2 px-2 py-1 rounded text-[9px] md:text-sm transition-colors min-w-0 overflow-hidden ${
                         selectedFile === fileKey
                           ? 'bg-purple-600 bg-opacity-40 border border-purple-500 text-purple-100'
                           : 'text-slate-400 hover:text-slate-200 hover:bg-purple-950'
                       }`}
                     >
-                      <FileCode size={16} />
-                      <span>{file.title}</span>
+                      <FileCode size={8} md:size={12} />
+                      <span className="text-[9px] md:text-xs truncate" title={file.title}>{file.title}</span>
                     </button>
                   ))}
                 </div>
@@ -94,8 +102,7 @@ export default function ProjectsPost() {
       {/* Toggle Sidebar Button */}
       <button
         onClick={() => setSidebarOpen(!sidebarOpen)}
-        className="absolute top-1/2 -translate-y-1/2 bg-slate-900 border border-slate-700 p-2 hover:bg-n-8 transition-all duration-300 text-slate-400 hover:text-white rounded-lg z-50"
-        style={{ left: sidebarOpen ? 'calc(16rem - 12px)' : '-12px' }}
+        className={`absolute top-1/2 -translate-y-1/2 bg-slate-900 border border-slate-700 p-2 hover:bg-n-8 transition-all duration-300 text-slate-400 hover:text-white rounded-lg z-50 ${sidebarOpen ? 'left-[calc(7.7rem-12px)] md:left-[calc(16rem-12px)]' : '-left-3'}`}
       >
         <ChevronRight
           size={20}
@@ -104,11 +111,11 @@ export default function ProjectsPost() {
       </button>
 
       {/* Main Content */}
-      <div className="flex-1 p-8 overflow-auto">
+      <div className="flex-1 p-6 overflow-auto">
         <div className="max-w-4xl">
-          <div className="mb-10">
-            <h1 className="text-4xl font-bold text-white mb-2">Code Explorer</h1>
-            <p className="text-slate-400">Click on any line of code to see a breakdown of its components</p>
+          <div className="mb-8">
+            <h1 className="text-2xl md:text-4xl font-bold text-white mb-2">Code Explorer</h1>
+            <p className="text-[0.65rem] md:text-sm text-slate-400 ">Click on any line of code to see a breakdown of its components</p>
           </div>
 
           {currentFile && (
@@ -123,29 +130,28 @@ export default function ProjectsPost() {
                         }))}
                         className="w-full text-left group"
                         >
-                        <div
-                            className={`flex items-center gap-3 px-4 py-3 font-mono text-sm transition-all ${
+                    <div className={`flex items-center gap-3 px-4 py-3 font-mono text-xs md:text-sm transition-all min-w-0 overflow-hidden ${
                             expandedLines[lineIdx]
                             ? 'bg-purple-950 bg-opacity-30 text-slate-200 hover:bg-opacity-70 hover:border-slate-500 text-blue-100'
                             : 'bg-purple-950 bg-opacity-50 text-slate-200 hover:bg-opacity-70 hover:border-slate-500'
                         }`}
                     >
-                        <code>{lineItem.code}</code>
+                    <code className="truncate block text-[0.65rem] md:text-sm">{lineItem.code}</code>
                     </div>
                     </button>
 
                     {/* Breakdown */}
                     {expandedLines[lineIdx] && (
-                    <div className="mt-4 space-y-3 animate-in fade-in duration-200">
+                    <div className="mt-4 mb-4 space-y-3 animate-in fade-in duration-200">
                         {lineItem.breakdown.map((item, idx) => (
                         <div
-                            key={idx}
-                            className="ml-6 pl-4 border-l-2 border-purple-300 py-2"
+                        key={idx}
+                        className="ml-4 pl-3 border-l-2 border-purple-300 py-2"
                         >
-                            <div className="font-mono text-sm font-semibold text-purple-300 mb-1">
-                            {item.part}
-                            </div>
-                            <div className="text-sm leading-relaxed">
+                        <div className="font-mono text-[10px] md:text-sm font-semibold text-purple-300 mb-1">
+                        {item.part}
+                        </div>
+                            <div className="text-[10px] md:text-sm leading-relaxed">
                             {item.explanation}
                             </div>
                         </div>
@@ -160,8 +166,8 @@ export default function ProjectsPost() {
 
           {/* Instructions */}
           <div className="mt-12 bg-purple-950 bg-opacity-50 border border-slate-600 rounded-lg p-6">
-            <h2 className="text-white font-semibold mb-3">How to use:</h2>
-            <ul className="text-slate-300 space-y-2 text-sm">
+            <h2 className="text-white font-semibold mb-3 text-[0.75rem] md:text-sm">How to use:</h2>
+            <ul className="text-slate-300 space-y-2 text-[0.65rem] md:text-sm">
               <li>✓ Use the sidebar on the left to browse file directories</li>
               <li>✓ Click on any file to open it and view its code</li>
               <li>✓ Click on the code line to expand and see its breakdown</li>

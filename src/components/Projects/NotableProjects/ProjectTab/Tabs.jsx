@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Tagline from "../../../Tagline";
-import { PaginationList } from "../../../../constants";
+import { projects } from "../../../../assets/Projects";
 import { check2, grid, loading1 } from "../../../../assets/App";
 import { Gradient } from "../../../App/Roadmap/Design/Roadmap";
 
 const Tabs = () => {
     const [filter, setFilter] = useState("All");
 
-    const filteredList = filter === "All" ? PaginationList : PaginationList.filter(item => item.title === filter);
+    const filteredList = filter === "All" ? projects : projects.filter(item => item.category === filter);
 
     return (
         <div className="container relative flex flex-col items-center justify-center z-2">
