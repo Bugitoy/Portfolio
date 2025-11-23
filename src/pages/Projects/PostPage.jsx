@@ -44,7 +44,7 @@ export default function ProjectsPost() {
   return (
 
     <>
-    <div className="flex min-h-screen bg-gradient-to-br from-slate-900 to-slate-950 pt-[4.75rem] lg:pt-[5.25rem]">
+    <div className="flex min-h-screen bg-gradient-to-br from-slate-950 to-gray-950 pt-[4.75rem] lg:pt-[5.25rem]">
         <Header />  
       {/* Floating Sidebar */}
       <div
@@ -103,7 +103,7 @@ export default function ProjectsPost() {
       {/* Toggle Sidebar Button */}
       <button
         onClick={() => setSidebarOpen(!sidebarOpen)}
-        className={`absolute top-1/2 -translate-y-1/2 bg-slate-950 border border-slate-700 p-1 md:p-2 hover:bg-n-8 transition-all duration-300 text-slate-400 hover:text-white rounded-lg z-2 ${sidebarOpen ? 'left-[calc(7.7rem-12px)] md:left-[calc(16rem-12px)]' : '-left-3'}`}
+        className={`absolute top-1/2 -translate-y-1/2 border border-slate-700 p-1 md:p-2 bg-n-8 transition-all duration-300 text-slate-400 hover:text-white rounded-lg z-2 ${sidebarOpen ? 'left-[calc(7.7rem-12px)] md:left-[calc(16rem-12px)]' : '-left-3'}`}
       >
         <ChevronRight
           size={20}
@@ -138,8 +138,8 @@ export default function ProjectsPost() {
                         >
                     <div className={`flex items-center gap-3 px-4 py-3 font-mono text-xs md:text-sm transition-all min-w-0 overflow-hidden ${
                             expandedLines[lineIdx]
-                            ? 'bg-purple-950 bg-opacity-30 text-slate-200 hover:bg-opacity-70 hover:border-slate-500 text-blue-100'
-                            : 'bg-purple-950 bg-opacity-50 text-slate-200 hover:bg-opacity-70 hover:border-slate-500'
+                            ? 'bg-slate-950 bg-opacity-30 text-slate-200 hover:bg-opacity-70 hover:border-slate-500 text-blue-100'
+                            : 'bg-slate-950 bg-opacity-50 text-slate-200 hover:bg-opacity-70 hover:border-slate-500'
                         }`}
                     >
                     <code className="truncate block text-[0.65rem] md:text-sm">{lineItem.code}</code>
