@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { ChevronDown, ChevronRight, ChevronLeft, FileCode, Folder, FolderOpen } from 'lucide-react';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import Header from "../../components/App/Header/Header";
 import { projects } from '../../assets/Projects';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -34,12 +36,21 @@ export default function ProjectsPost() {
 
   // Find the selected file within the currently selected project's filesystem
   let currentFile = null;
+  let currentFolderName = null;
   for (const folder in fileSystem) {
     if (fileSystem[folder].files[selectedFile]) {
       currentFile = fileSystem[folder].files[selectedFile];
+      currentFolderName = folder;
       break;
     }
   }
+
+  const languageMap = {
+    JavaScript: 'javascript',
+    Python: 'python',
+    React: 'javascript',
+  };
+  const codeLanguage = languageMap[currentFolderName] || 'text';
 
   return (
 
@@ -142,13 +153,22 @@ export default function ProjectsPost() {
                             : 'bg-opacity-50 text-slate-200 hover:bg-opacity-70 hover:border-slate-500'
                         }`}
                     >
-                    <code className="truncate block text-[0.65rem] md:text-sm">{lineItem.code}</code>
+                      <div className="w-full">
+                        <SyntaxHighlighter
+                          language={codeLanguage}
+                          style={vscDarkPlus}
+                          customStyle={{ background: 'transparent', padding: 0, margin: 0 }}
+                          wrapLongLines={true}
+                        >
+                          {lineItem.code}
+                        </SyntaxHighlighter>
+                      </div>
                     </div>
                     </button>
 
                     {/* Breakdown */}
                     {expandedLines[lineIdx] && (
-                    <div className="bg-slate-950 p-1 mt-2 md:mt-4 mb-4 space-y-1 md:space-y-3 animate-in fade-in duration-200">
+                    <div className="p-1 mt-2 md:mt-4 mb-4 space-y-1 md:space-y-3 animate-in fade-in duration-200">
                         {lineItem.breakdown.map((item, idx) => (
                         <div
                         key={idx}
