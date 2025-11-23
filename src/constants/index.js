@@ -156,8 +156,8 @@ export const roadmap = [
   },
   {
     id: "3",
-    title: "Politics, History and Articles",
-    text: "I've been trying to expand my world view, reading about the past, analysing past empires and broadening my knowledge.",
+    title: "Web RTC and Real-time Communications",
+    text: "I've been exploring Web RTC protocols, peer-to-peer connections, media streaming, and real-time data transfer techniques.",
     date: " April",
     status: "progress",
     imageUrl: roadmap4,
@@ -250,7 +250,7 @@ export const collabContent = [
   },
   {
     id: "1",
-    title: "Over 18 medals earned in prestigious BTA & ISSSA tennis tournaments",
+    title: "Over 18 medals earned in prestigious tennis tournaments",
   },
   {
     id: "2",
@@ -347,8 +347,8 @@ export const pricing = [
     description: "Senior member of the Legae Academy’s Advocates for Red Cross Committee",
     price: "Charity",
     features: [
-      "Painting the Tlamelong Rehabilitation Centre for disabled people in Tlokweng",
-      "Hosted a FIFA tournament to raise money and given to the Cheshire foundation",
+      "Painting the Tlamelong Rehabilitation Centre for disabled people.",
+      "Hosted a FIFA tournament to raise money and donated the proceedings to the Cheshire foundation",
       "Hosted a bake sale and bought food for the disabled people using the money",
     ],
   },
@@ -358,7 +358,7 @@ export const benefits = [
   {
     id: "0",
     title: "Further Studies",
-    text: "My goal with this website is to document my findings and weekly readings as I delve deeper into the realms of Computer Engineering and Artificial Intelligence.",
+    text: "My goal with this website is to document my findings and weekly readings as I delve deeper into the realms of Computer Engineering and GPU programming.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,

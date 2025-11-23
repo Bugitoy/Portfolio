@@ -7,9 +7,7 @@ import { Gradient } from "../../../App/Roadmap/Design/Roadmap";
 const Tabs = () => {
     const [filter, setFilter] = useState("All");
 
-    const filteredList = filter === "All" 
-        ? PaginationList 
-        : PaginationList.filter(item => item.title === filter);
+    const filteredList = filter === "All" ? PaginationList : PaginationList.filter(item => item.title === filter);
 
     return (
         <div className="container relative flex flex-col items-center justify-center z-2">

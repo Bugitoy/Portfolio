@@ -1,14 +1,7 @@
-import { curve, heroBackground, pixelguytalking } from "../../../assets/App";
-import Button from "../../Button";
+import { pixelguytalking } from "../../../assets/App";
 import Section from "../../Section";
-import { BackgroundCircles, BottomLine } from "../../About/Hero/Design/HeroDesign";
 import { useRef } from "react";
-import CompanyLogos from "../../App/Hero/CompanyLogos/CompanyLogos";
-import RepeatedBlocks from "../../About/Experience/Design/RepeatedBlocks";
-import ConnectedBlocks from "../../About/Experience/Design/ConnectedBlocks";
-import AboutMeTabs from "../../About/Hero/Design/AboutMeTabs";
-import Passage from "../../About/Hero/Design/Passage";
-import { City, Coast, Railway } from "../../../assets/About";
+
 
 
 const Card = () => {
