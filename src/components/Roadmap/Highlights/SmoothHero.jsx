@@ -2872,11 +2872,11 @@ const ScheduleItem = ({ title, date, location, project }) => {
       className="mb-9 flex items-center justify-between border-b border-zinc-800 px-3 pb-9"
     >
       <div>
-          <p className="mb-1.5 text-sm lg:text-xl text-zinc-50">{title}</p>
-          <p className="text-xs lg:text-sm uppercase text-zinc-500">{date}</p> 
-          <p className="mt-1 text-xs lg:text-sm uppercase text-purple-200">Project: {project}</p>
+          <p className="mb-1.5 text-xs lg:text-xl text-zinc-50">{title}</p>
+          <p className="text-[0.65rem] lg:text-sm uppercase text-zinc-500">{date}</p> 
+          <p className="mt-1 text-[0.65rem] lg:text-sm uppercase text-purple-200">Project: {project}</p>
       </div>
-      <div className="flex items-center gap-1.5 text-end text-sm uppercase text-zinc-500">
+      <div className="flex items-center gap-1.5 text-end text-[0.5rem] lg:text-sm uppercase text-zinc-500">
         <p>{location}</p>
         <FiMapPin />
       </div>
