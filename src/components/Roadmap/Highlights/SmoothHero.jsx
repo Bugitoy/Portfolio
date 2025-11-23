@@ -28,13 +28,13 @@ const Schedule = () => {
   return (
     <section
       id="launch-schedule"
-      className="mx-auto max-w-5xl px-4 py-10 text-white"
+      className="mx-auto max-w-5xl px-4 py-0 lg:py-10 text-white"
     >
       <motion.h1
         initial={{ y: 48, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.75 }}
-        className="mb-15 text-2xl lg:text-4xl font-black uppercase text-zinc-50 px-3 mt-[130px]"
+        className="mb-8 lg:mb-15 text-2xl lg:text-4xl font-black uppercase text-zinc-50 px-3 mt-[130px]"
       >
         Timeline of my projects and learning journey
       </motion.h1>
