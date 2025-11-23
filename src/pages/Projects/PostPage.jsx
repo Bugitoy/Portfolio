@@ -138,7 +138,7 @@ export default function ProjectsPost() {
                         >
                     <div className={`flex items-center gap-3 px-4 py-3 font-mono text-xs md:text-sm transition-all min-w-0 overflow-hidden ${
                             expandedLines[lineIdx]
-                            ? 'bg-opacity-30 text-slate-200 hover:bg-opacity-70 hover:border-slate-500 text-blue-100'
+                            ? 'bg-purple-950 bg-opacity-30 text-slate-200 hover:bg-opacity-70 hover:border-slate-500 text-blue-100'
                             : 'bg-opacity-50 text-slate-200 hover:bg-opacity-70 hover:border-slate-500'
                         }`}
                     >
@@ -148,16 +148,16 @@ export default function ProjectsPost() {
 
                     {/* Breakdown */}
                     {expandedLines[lineIdx] && (
-                    <div className="mt-4 mb-4 space-y-3 animate-in fade-in duration-200">
+                    <div className="bg-slate-950 p-1 mt-2 md:mt-4 mb-4 space-y-1 md:space-y-3 animate-in fade-in duration-200">
                         {lineItem.breakdown.map((item, idx) => (
                         <div
                         key={idx}
-                        className="ml-4 pl-3 border-l-2 border-purple-300 py-2"
+                        className="ml-4 pl-3 border-l-[1px] md:border-l-2 border-purple-300 py-1 md:py-2"
                         >
-                        <div className="font-mono text-[10px] md:text-sm font-semibold text-purple-300 mb-1">
+                        <div className="font-mono text-[8px] md:text-sm font-semibold text-purple-300 mb-1">
                         {item.part}
                         </div>
-                            <div className="text-[10px] md:text-sm leading-relaxed">
+                            <div className="text-[0.50rem] md:text-sm leading-relaxed">
                             {item.explanation}
                             </div>
                         </div>
