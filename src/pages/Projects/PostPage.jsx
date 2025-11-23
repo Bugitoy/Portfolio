@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { ChevronDown, ChevronRight, FileCode, Folder, FolderOpen } from 'lucide-react';
+import { ChevronDown, ChevronRight, ChevronLeft, FileCode, Folder, FolderOpen } from 'lucide-react';
 import Header from "../../components/App/Header/Header";
 import { projects } from '../../assets/Projects';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export default function ProjectsPost() {
   // Track which code lines are expanded (per-file)
@@ -17,6 +17,7 @@ export default function ProjectsPost() {
   const projectId = params.get('id');
   const project = projects.find(p => p.id === projectId || p.slug === projectId) || projects[0];
   const fileSystem = project.fileSystem;
+  const navigate = useNavigate();
 
   const toggleFolder = (folderName) => {
     setExpandedFolders(prev => ({
@@ -63,9 +64,9 @@ export default function ProjectsPost() {
                 className="w-full flex items-center gap-2 px-2 py-1 mb-1 rounded hover:bg-purple-950 transition-colors text-slate-200 hover:text-white min-w-0 overflow-hidden"
               >
                 {expandedFolders[folderName] ? (
-                  <FolderOpen size={10} md:size={16} className="text-purple-400" />
+                  <FolderOpen size={10} md:size={16} hidden md:block className="text-purple-400" />
                 ) : (
-                  <Folder size={10} md:size={16} className="text-slate-400" />
+                  <Folder size={10} md:size={16} hidden md:block className="text-slate-400" />
                 )}
                 <ChevronRight
                   size={10} md:size={16}
@@ -88,7 +89,7 @@ export default function ProjectsPost() {
                           : 'text-slate-400 hover:text-slate-200 hover:bg-purple-950'
                       }`}
                     >
-                      <FileCode size={8} md:size={12} />
+                      <FileCode size={8} hidden md:block md:size={12} />
                       <span className="text-[9px] md:text-xs truncate" title={file.title}>{file.title}</span>
                     </button>
                   ))}
@@ -102,7 +103,7 @@ export default function ProjectsPost() {
       {/* Toggle Sidebar Button */}
       <button
         onClick={() => setSidebarOpen(!sidebarOpen)}
-        className={`absolute top-1/2 -translate-y-1/2 bg-slate-900 border border-slate-700 p-1 md:p-2 hover:bg-n-8 transition-all duration-300 text-slate-400 hover:text-white rounded-lg z-50 ${sidebarOpen ? 'left-[calc(7.7rem-12px)] md:left-[calc(16rem-12px)]' : '-left-3'}`}
+        className={`absolute top-1/2 -translate-y-1/2 bg-n-8 border border-slate-700 p-1 md:p-2 hover:bg-n-8 transition-all duration-300 text-slate-400 hover:text-white rounded-lg z-2 ${sidebarOpen ? 'left-[calc(7.7rem-12px)] md:left-[calc(16rem-12px)]' : '-left-3'}`}
       >
         <ChevronRight
           size={20}
@@ -114,6 +115,11 @@ export default function ProjectsPost() {
       <div className="flex-1 p-6 overflow-auto">
         <div className="max-w-4xl">
           <div className="mb-8">
+            <div className="mb-2">
+              <div className="text-xs md:text-sm text-slate-400 truncate" title={selectedFile}>
+                {currentFile ? currentFile.title : selectedFile}
+              </div>
+            </div>
             <h1 className="text-2xl md:text-4xl font-bold text-white mb-2">Code Explorer</h1>
             <p className="text-[0.65rem] md:text-sm text-slate-400 ">Click on any line of code to see a breakdown of its components</p>
           </div>
@@ -168,10 +174,10 @@ export default function ProjectsPost() {
           <div className="mt-12 bg-purple-950 bg-opacity-50 border border-slate-600 rounded-lg p-6">
             <h2 className="text-white font-semibold mb-3 text-[0.75rem] md:text-sm">How to use:</h2>
             <ul className="text-slate-300 space-y-2 text-[0.65rem] md:text-sm">
-              <li>✓ Use the sidebar on the left to browse file directories</li>
-              <li>✓ Click on any file to open it and view its code</li>
-              <li>✓ Click on the code line to expand and see its breakdown</li>
-              <li>✓ Click the chevron button to toggle the sidebar</li>
+              <li className="leading-tight">Use the sidebar on the left to browse file directories</li>
+              <li className="leading-tight">Click on any file to open it and view its code</li>
+              <li className="leading-tight">Click on the code line to expand and see its breakdown</li>
+              <li className="leading-tight">Click the chevron button to toggle the sidebar</li>
             </ul>
           </div>
         </div>
