@@ -50,7 +50,7 @@ export default function ProjectsPost() {
       <div
         className={`${
           sidebarOpen ? 'w-[8rem] md:w-64' : 'w-0'
-        } transition-all duration-300 bg-slate-950 border-r border-slate-700 overflow-hidden flex flex-col relative`}
+        } transition-all duration-300 bg-n-8 border-r border-slate-700 overflow-hidden flex flex-col relative`}
       >
       
           <h2 className=" p-4 pb-2 text-white font-semibold text-[11px] md:text-lg">Files</h2>
@@ -103,7 +103,7 @@ export default function ProjectsPost() {
       {/* Toggle Sidebar Button */}
       <button
         onClick={() => setSidebarOpen(!sidebarOpen)}
-        className={`absolute top-1/2 -translate-y-1/2 bg-n-8 border border-slate-700 p-1 md:p-2 hover:bg-n-8 transition-all duration-300 text-slate-400 hover:text-white rounded-lg z-2 ${sidebarOpen ? 'left-[calc(7.7rem-12px)] md:left-[calc(16rem-12px)]' : '-left-3'}`}
+        className={`absolute top-1/2 -translate-y-1/2 bg-slate-950 border border-slate-700 p-1 md:p-2 hover:bg-n-8 transition-all duration-300 text-slate-400 hover:text-white rounded-lg z-2 ${sidebarOpen ? 'left-[calc(7.7rem-12px)] md:left-[calc(16rem-12px)]' : '-left-3'}`}
       >
         <ChevronRight
           size={20}
