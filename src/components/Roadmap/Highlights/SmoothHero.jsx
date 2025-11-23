@@ -34,14 +34,14 @@ const Schedule = () => {
         initial={{ y: 48, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.75 }}
-        className="mb-15 text-4xl font-black uppercase text-zinc-50 px-3 mt-[130px]"
+        className="mb-15 text-2xl lg:text-4xl font-black uppercase text-zinc-50 px-3 mt-[130px]"
       >
         Timeline of my projects and learning journey
       </motion.h1>
 
       <ScheduleItem
         title="Built a Pathtracer from scratch in Vulkan and C++ using knowledge gained from watching the The Cherno on youtube"
-        date="Nov 10th 2025"
+        date="Nov 10th"
         location="Ohio"
         project="RayTracer"
       />
@@ -2872,9 +2872,9 @@ const ScheduleItem = ({ title, date, location, project }) => {
       className="mb-9 flex items-center justify-between border-b border-zinc-800 px-3 pb-9"
     >
       <div>
-          <p className="mb-1.5 text-xl text-zinc-50">{title}</p>
-          <p className="text-sm uppercase text-zinc-500">{date}</p> 
-          <p className="mt-1 text-sm uppercase text-purple-200">Project: {project}</p>
+          <p className="mb-1.5 text-sm lg:text-xl text-zinc-50">{title}</p>
+          <p className="text-xs lg:text-sm uppercase text-zinc-500">{date}</p> 
+          <p className="mt-1 text-xs lg:text-sm uppercase text-purple-200">Project: {project}</p>
       </div>
       <div className="flex items-center gap-1.5 text-end text-sm uppercase text-zinc-500">
         <p>{location}</p>
