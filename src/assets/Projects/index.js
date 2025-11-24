@@ -22,7 +22,6 @@ export const projects = [
     imageUrl: roadmap2,
     colorful: false,
     category: 'Computer Graphics',
-    fileSystem: gptStyleTransformerFileSystem,
   },
   {
     id: "2",
@@ -33,7 +32,6 @@ export const projects = [
     imageUrl: roadmap2,
     colorful: false,
     category: 'Computer Graphics',
-    fileSystem: gptStyleTransformerFileSystem,
   },
   {
     id: "3",
@@ -44,7 +42,6 @@ export const projects = [
     imageUrl: roadmap2,
     colorful: false,
     category: 'Computer Graphics',
-    fileSystem: gptStyleTransformerFileSystem,
   },
 ];
 

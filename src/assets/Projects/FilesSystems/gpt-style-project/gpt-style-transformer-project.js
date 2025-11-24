@@ -1,4 +1,4 @@
-import { forLoopFile } from './Javascript/For_loop.js';
+import { gpt } from './Javascript/gpt.js';
 import { arrowFunctionFile } from './Javascript/arrow_function.js';
 
 // Base filesystem shared by the example project (folders and files)
@@ -6,10 +6,11 @@ export const gptStyleTransformerFileSystem = {
   JavaScript: {
     type: 'folder',
     files: {
-      ...forLoopFile,
+      ...gpt,
       ...arrowFunctionFile,
     },
   },
+  /*
   Python: {
     type: 'folder',
     files: {
@@ -91,5 +92,5 @@ export const gptStyleTransformerFileSystem = {
         ],
       },
     },
-  },
+  },*/
 };

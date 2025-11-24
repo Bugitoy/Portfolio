@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronDown, ChevronRight, ChevronLeft, FileCode, Folder, FolderOpen } from 'lucide-react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
@@ -7,19 +7,73 @@ import { projects } from '../../assets/Projects';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 export default function ProjectsPost() {
-  // Track which code lines are expanded (per-file)
-  const [expandedLines, setExpandedLines] = useState({});
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [expandedFolders, setExpandedFolders] = useState({});
-  const [selectedFile, setSelectedFile] = useState('forLoop');
   const location = useLocation();
+  const navigate = useNavigate();
 
   // Determine selected project from query param `id` (falls back to first project)
   const params = new URLSearchParams(location.search);
   const projectId = params.get('id');
+  const fileParam = params.get('file');
   const project = projects.find(p => p.id === projectId || p.slug === projectId) || projects[0];
   const fileSystem = project.fileSystem;
-  const navigate = useNavigate();
+
+  // Track which code lines are expanded (per-file)
+  const [expandedLines, setExpandedLines] = useState({});
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [expandedFolders, setExpandedFolders] = useState({});
+
+  // Initialize selectedFile from URL `file` param or fall back to the first file in the filesystem
+  const [selectedFile, setSelectedFile] = useState(() => {
+    try {
+      if (fileParam) {
+        // ensure the file exists in the filesystem
+        for (const folder in fileSystem) {
+          if (fileSystem[folder].files[fileParam]) return fileParam;
+        }
+      }
+      // pick the first file key available
+      for (const folder in fileSystem) {
+        const keys = Object.keys(fileSystem[folder].files || {});
+        if (keys.length) return keys[0];
+      }
+    } catch (e) {
+      // fallback
+    }
+    return null;
+  });
+
+  // If the project (or its filesystem) changes, ensure selectedFile points to a valid file
+  useEffect(() => {
+    if (!selectedFile) {
+      // set to first available file
+      for (const folder in fileSystem) {
+        const keys = Object.keys(fileSystem[folder].files || {});
+        if (keys.length) {
+          setSelectedFile(keys[0]);
+          return;
+        }
+      }
+    } else {
+      // if selectedFile no longer exists in new filesystem, reset to first available
+      let exists = false;
+      for (const folder in fileSystem) {
+        if (fileSystem[folder].files[selectedFile]) {
+          exists = true;
+          break;
+        }
+      }
+      if (!exists) {
+        for (const folder in fileSystem) {
+          const keys = Object.keys(fileSystem[folder].files || {});
+          if (keys.length) {
+            setSelectedFile(keys[0]);
+            return;
+          }
+        }
+        setSelectedFile(null);
+      }
+    }
+  }, [projectId]);
 
   const toggleFolder = (folderName) => {
     setExpandedFolders(prev => ({
@@ -32,6 +86,15 @@ export default function ProjectsPost() {
     setSelectedFile(fileKey);
     // clear any expanded code lines when switching files
     setExpandedLines({});
+    // update URL so the selected file is bookmarkable/shareable
+    try {
+      const params = new URLSearchParams(location.search);
+      params.set('file', fileKey);
+      if (projectId) params.set('id', projectId);
+      navigate(`${location.pathname}?${params.toString()}`, { replace: true });
+    } catch (e) {
+      // ignore URL update errors
+    }
   };
 
   // Find the selected file within the currently selected project's filesystem
@@ -75,13 +138,13 @@ export default function ProjectsPost() {
                 className="w-full flex items-center gap-2 px-2 py-1 mb-1 rounded hover:bg-purple-950 transition-colors text-slate-200 hover:text-white min-w-0 overflow-hidden"
               >
                 {expandedFolders[folderName] ? (
-                  <FolderOpen size={10} md:size={16} hidden md:block className="text-purple-400" />
+                  <FolderOpen size={16} className="hidden md:block text-purple-400" />
                 ) : (
-                  <Folder size={10} md:size={16} hidden md:block className="text-slate-400" />
+                  <Folder size={16} className="hidden md:block text-slate-400" />
                 )}
                 <ChevronRight
-                  size={10} md:size={16}
-                  className={`transition-transform ${
+                  size={16}
+                  className={`hidden md:block transition-transform ${
                     expandedFolders[folderName] ? 'rotate-90' : ''
                   }`}
                 />
@@ -100,7 +163,7 @@ export default function ProjectsPost() {
                           : 'text-slate-400 hover:text-slate-200 hover:bg-purple-950'
                       }`}
                     >
-                      <FileCode size={8} hidden md:block md:size={12} />
+                      <FileCode size={12} className="hidden md:block" />
                       <span className="text-[7px] md:text-xs truncate" title={file.title}>{file.title}</span>
                     </button>
                   ))}
@@ -138,7 +201,10 @@ export default function ProjectsPost() {
           {currentFile && (
             <div className="overflow-hidden transition-colors">
                 {/* Code Line */}
-                    {currentFile.lines.map((lineItem, lineIdx) => (
+                    {currentFile.lines.map((lineItem, lineIdx) => {
+                    const leadingSpacesMatch = lineItem.code ? lineItem.code.match(/^(\s*)/) : null;
+                    const leadingSpaces = leadingSpacesMatch ? leadingSpacesMatch[1].replace(/\t/g, '    ').length : 0;
+                    return (
                     <div key={lineIdx}>
                         <button
                         onClick={() => setExpandedLines(prev => ({
@@ -147,59 +213,55 @@ export default function ProjectsPost() {
                         }))}
                         className="w-full text-left group"
                         >
-                    <div className={`flex items-center gap-3 px-4 py-3 font-mono text-xs md:text-sm transition-all min-w-0 overflow-hidden ${
+        <div className={`flex items-center gap-3 px-4 py-0 font-mono text-[0.40rem] md:text-sm transition-all min-w-0 overflow-hidden ${
                             expandedLines[lineIdx]
                             ? 'bg-purple-950 bg-opacity-30 text-slate-200 hover:bg-opacity-70 hover:border-slate-500 text-blue-100'
                             : 'bg-opacity-50 text-slate-200 hover:bg-opacity-70 hover:border-slate-500'
                         }`}
                     >
                       <div className="w-full">
-                        <SyntaxHighlighter
-                          language={codeLanguage}
-                          style={vscDarkPlus}
-                          customStyle={{ background: 'transparent', padding: 0, margin: 0 }}
-                          wrapLongLines={true}
-                        >
-                          {lineItem.code}
-                        </SyntaxHighlighter>
+                        <div className="code-wrapper-sm text-[0.55rem] md:text-sm leading-none">
+                          <SyntaxHighlighter
+                            language={codeLanguage}
+                            style={vscDarkPlus}
+                            customStyle={{ background: 'transparent', padding: 0, margin: 0, fontSize: '0.55rem', lineHeight: '1rem' }}
+                            codeTagProps={{ style: { fontSize: '0.55rem', lineHeight: '1rem' } }}
+                            wrapLongLines={true}
+                          >
+                            {lineItem.code}
+                          </SyntaxHighlighter>
+                        </div>
                       </div>
                     </div>
                     </button>
 
-                    {/* Breakdown */}
-                    {expandedLines[lineIdx] && (
-                    <div className="p-1 mt-2 md:mt-4 mb-4 space-y-1 md:space-y-3 animate-in fade-in duration-200">
-                        {lineItem.breakdown.map((item, idx) => (
-                        <div
-                        key={idx}
-                        className="ml-4 pl-3 border-l-[1px] md:border-l-2 border-purple-300 py-1 md:py-2"
-                        >
-                        <div className="font-mono text-[8px] md:text-sm font-semibold text-purple-300 mb-1">
-                        {item.part}
+                {/* Breakdown */}
+                {expandedLines[lineIdx] && (
+                <div className="p-1 md:mt-1 mb-1 space-y-1 md:space-y-1 animate-in fade-in duration-200">
+                {lineItem.breakdown && lineItem.breakdown.length > 0 ? (
+                    lineItem.breakdown.map((item, idx) => (
+                    <div key={idx} className="ml-4 pl-3 border-l-[1px] md:border-l-2 border-purple-300 md:py-1 md:py-2">
+                        <div style={{ marginLeft: `${leadingSpaces}ch` }}>
+                        <div className="font-mono text-[8px] md:text-xs font-semibold text-purple-300 md:mb-1">
+                            {item.part}
                         </div>
-                            <div className="text-[0.50rem] md:text-sm leading-relaxed">
+                        <div className="text-[0.50rem] md:text-xs leading-relaxed">
                             {item.explanation}
-                            </div>
                         </div>
-                        ))}
                         </div>
-                        )}
                     </div>
-                    ))}
+                    ))
+                ) : (
+                    <div className="ml-4 pl-3 border-l-[1px] md:border-l-2 border-purple-300 py-1 md:py-2 text-[0.65rem] text-slate-400">No breakdown available</div>
+                )}
+                </div>
+            )}
             </div>
+      );
+      })}
+      </div>
             
           )}
-
-          {/* Instructions */}
-          <div className="mt-12 bg-slate-900 bg-opacity-50 border border-slate-600 rounded-lg p-6">
-            <h2 className="text-white font-semibold mb-3 text-[0.75rem] md:text-sm">How to use:</h2>
-            <ul className="text-slate-300 space-y-2 text-[0.65rem] md:text-sm">
-              <li className="leading-tight">Use the sidebar on the left to browse file directories</li>
-              <li className="leading-tight">Click on any file to open it and view its code</li>
-              <li className="leading-tight">Click on the code line to expand and see its breakdown</li>
-              <li className="leading-tight">Click the chevron button to toggle the sidebar</li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>

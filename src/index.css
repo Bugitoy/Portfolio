@@ -86,3 +86,18 @@
 .-rotate-360 {
   @apply rotate-[-360deg]
 }
+
+/* Ensure react-syntax-highlighter respects our responsive font sizing */
+.code-wrapper-sm pre,
+.code-wrapper-sm code {
+  font-size: 0.55rem !important;
+  line-height: 1rem !important;
+}
+
+@media (min-width: 768px) {
+  .code-wrapper-sm pre,
+  .code-wrapper-sm code {
+    font-size: 0.875rem !important; /* md:text-sm */
+    line-height: 1.25rem !important;
+  }
+}
