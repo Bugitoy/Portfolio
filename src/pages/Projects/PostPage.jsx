@@ -124,7 +124,7 @@ export default function ProjectsPost() {
       <div
         className={`${
           sidebarOpen ? 'w-[8rem] md:w-64' : 'w-0'
-        } transition-all duration-300 bg-n-8 border-r border-slate-700 overflow-hidden flex flex-col relative`}
+        } transition-all duration-300 bg-n-8 border-r border-slate-700 overflow-hidden flex flex-col fixed top-[4.75rem] left-0 h-[calc(100vh-4.75rem)] z-40`}
       >
       
           <h2 className=" p-4 pb-2 text-white font-semibold text-[11px] md:text-lg">Files</h2>
@@ -185,8 +185,8 @@ export default function ProjectsPost() {
         />
       </button>
 
-      {/* Main Content */}
-      <div className="flex-1 p-6 overflow-auto">
+  {/* Main Content */}
+  <div className={`flex-1 p-6 overflow-auto transition-all ${sidebarOpen ? 'pl-[8rem] md:pl-64' : ''}`}>
         <div className="max-w-4xl">
           <div className="mb-8">
             <div className="mb-2">
