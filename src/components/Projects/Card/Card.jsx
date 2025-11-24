@@ -22,10 +22,11 @@ const Card = () => {
           />
           <div className="flex flex-col justify-center p-15">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-purple-900 dark:text-white">
-              Noteworthy technology acquisitions 2021
+              Noteworthy Project:
             </h5>
             <p className="mb-3 text-gray-700 dark:text-gray-400">
-              Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+              In July 2025, I build a web scraper that scanned a webpage containing the names of all the universities from around the world.
+              I then extracted and stored this data in a database for use in a different project called study-talk.com
             </p>
           </div>
         </a>

@@ -186,7 +186,7 @@ export default function ProjectsPost() {
       </button>
 
   {/* Main Content */}
-  <div className={`flex-1 p-6 overflow-auto transition-all ${sidebarOpen ? 'pl-[8rem] md:pl-64' : ''}`}>
+  <div className={`flex-1 p-6 overflow-auto transition-all ${sidebarOpen ? 'pl-[9rem] md:pl-80' : ''}`}>
         <div className="max-w-4xl">
           <div className="mb-8">
             <div className="mb-2">

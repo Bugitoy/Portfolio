@@ -56,7 +56,7 @@ const Tabs = () => {
                             }`}
                             key={item.id}
                         >
-                            <div className="relative p-8 bg-n-8 rounded-[2.4375rem] overflow-hidden xl:p-15">
+                            <Link to={`/projects/Postpage?id=${item.id}`} className="relative p-8 bg-n-8 rounded-[2.4375rem] overflow-hidden xl:p-15 block">
                                     <div className="absolute top-0 left-0 max-w-full">
                                         <img
                                             className="w-full"
@@ -92,12 +92,10 @@ const Tabs = () => {
                                                 alt={item.title}
                                             />
                                         </div>
-                                                <Link to={`/projects/Postpage?id=${item.id}`} className="hover:underline">
                                                     <h4 className="text-md lg:h4 mb-4">{item.title}</h4>
-                                                </Link>
                                         <p className="body-2 text-n-4">{item.text}</p>
                                     </div>
-                            </div>
+                            </Link>
                         </div>
                     );
                 })}
