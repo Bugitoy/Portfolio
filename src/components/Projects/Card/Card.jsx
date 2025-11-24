@@ -25,7 +25,7 @@ const Card = () => {
               Noteworthy Project:
             </h5>
             <p className="mb-3 text-gray-700 dark:text-gray-400">
-              In July 2025, I build a web scraper that scanned a webpage containing the names of all the universities from around the world.
+              In July 2025, I built a web scraper that scanned a webpage containing the names of all the universities from around the world.
               I then extracted and stored this data in a database for use in a different project called study-talk.com
             </p>
           </div>
