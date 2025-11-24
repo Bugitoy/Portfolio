@@ -26,10 +26,10 @@ const Tabs = () => {
                     AI and Machine Learning 
                 </button>
                 <button 
-                    onClick={() => setFilter("Computer Graphics")} 
+                    onClick={() => setFilter("Accelerated Computing")} 
                     className={`px-4 py-2 rounded-lg ${filter === "Computer Graphics" ? "bg-purple-600 text-white" : "bg-white text-black border border-gray-300"}`}
                 >
-                    Computer Graphics 
+                    Accelerated Computing 
                 </button>
                 <button 
                     onClick={() => setFilter("Electric Circuits")} 

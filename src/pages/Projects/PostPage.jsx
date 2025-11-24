@@ -20,7 +20,26 @@ export default function ProjectsPost() {
   // Track which code lines are expanded (per-file)
   const [expandedLines, setExpandedLines] = useState({});
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [expandedFolders, setExpandedFolders] = useState({});
+  
+  // Initialize expandedFolders from localStorage or default to empty object
+  // Use projectId to scope the state per project
+  const [expandedFolders, setExpandedFolders] = useState(() => {
+    try {
+      const stored = localStorage.getItem(`expandedFolders_${projectId}`);
+      return stored ? JSON.parse(stored) : {};
+    } catch (e) {
+      return {};
+    }
+  });
+  
+  // Persist expandedFolders to localStorage whenever it changes
+  useEffect(() => {
+    try {
+      localStorage.setItem(`expandedFolders_${projectId}`, JSON.stringify(expandedFolders));
+    } catch (e) {
+      // Ignore localStorage errors
+    }
+  }, [expandedFolders, projectId]);
 
   // Initialize selectedFile from URL `file` param or fall back to the first file in the filesystem
   const [selectedFile, setSelectedFile] = useState(() => {
@@ -41,6 +60,20 @@ export default function ProjectsPost() {
     }
     return null;
   });
+
+  // Load expanded folders state when project changes
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem(`expandedFolders_${projectId}`);
+      if (stored) {
+        setExpandedFolders(JSON.parse(stored));
+      } else {
+        setExpandedFolders({});
+      }
+    } catch (e) {
+      setExpandedFolders({});
+    }
+  }, [projectId]);
 
   // If the project (or its filesystem) changes, ensure selectedFile points to a valid file
   useEffect(() => {
@@ -76,10 +109,19 @@ export default function ProjectsPost() {
   }, [projectId]);
 
   const toggleFolder = (folderName) => {
-    setExpandedFolders(prev => ({
-      ...prev,
-      [folderName]: !prev[folderName],
-    }));
+    setExpandedFolders(prev => {
+      const updated = {
+        ...prev,
+        [folderName]: !prev[folderName],
+      };
+      // Persist immediately to localStorage
+      try {
+        localStorage.setItem(`expandedFolders_${projectId}`, JSON.stringify(updated));
+      } catch (e) {
+        // Ignore localStorage errors
+      }
+      return updated;
+    });
   };
 
   const handleFileSelect = (fileKey) => {
@@ -110,8 +152,12 @@ export default function ProjectsPost() {
 
   const languageMap = {
     JavaScript: 'javascript',
+    'GPT style transformer': 'python',
     Python: 'python',
     React: 'javascript',
+    'Cuda Accelerated Maxwell Equations': 'cpp',
+    'Character Level Bigram Model': 'python',
+    'Pytorch CrashCourse': 'python'
   };
   const codeLanguage = languageMap[currentFolderName] || 'text';
 
@@ -202,6 +248,13 @@ export default function ProjectsPost() {
             <div className="overflow-hidden transition-colors">
                 {/* Code Line */}
                     {currentFile.lines.map((lineItem, lineIdx) => {
+                    if (lineItem.image) {
+                      return (
+                        <div key={lineIdx} className="w-full flex pl-4 my-4">
+                          <img src={lineItem.image} alt="Project illustration" className="max-w-full h-auto rounded-lg shadow-md" />
+                        </div>
+                      );
+                    }
                     const leadingSpacesMatch = lineItem.code ? lineItem.code.match(/^(\s*)/) : null;
                     const leadingSpaces = leadingSpacesMatch ? leadingSpacesMatch[1].replace(/\t/g, '    ').length : 0;
                     return (

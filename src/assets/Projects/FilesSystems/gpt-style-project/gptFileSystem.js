@@ -1,13 +1,13 @@
-import { gpt } from './Javascript/gpt.js';
-import { arrowFunctionFile } from './Javascript/arrow_function.js';
+import { gpt } from './ProjectFiles/gpt.js';
+import { gptReadmeFile } from './ProjectFiles/README.js';
 
 // Base filesystem shared by the example project (folders and files)
 export const gptStyleTransformerFileSystem = {
-  JavaScript: {
+  'GPT style transformer': {
     type: 'folder',
     files: {
       ...gpt,
-      ...arrowFunctionFile,
+      ...gptReadmeFile,
     },
   },
   /*

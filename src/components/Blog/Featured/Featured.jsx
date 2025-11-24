@@ -51,7 +51,7 @@ const Featured = () => {
                     />
             </div>
             <div className="z-1 flex flex-1 flex-col gap-[20px] sm: items-center sm: text-center lg:text-justify lg:items-center lg:px-[1rem]">
-                <h1 className="text-[20px]">Lorem ipsum dolor sit amet alim consectetur adipisicing elit.</h1>
+                <h1 className="text-[20px]">This page is still under production. Please skip it.</h1>
                 <p className="text-[15px] font-light text-gray-500">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Cupiditate, quam nisi magni ea laborum inventore voluptatum
