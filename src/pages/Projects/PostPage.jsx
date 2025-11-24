@@ -144,7 +144,7 @@ export default function ProjectsPost() {
                 )}
                 <ChevronRight
                   size={16}
-                  className={`hidden md:block transition-transform ${
+                  className={`transition-transform ${
                     expandedFolders[folderName] ? 'rotate-90' : ''
                   }`}
                 />
@@ -174,10 +174,10 @@ export default function ProjectsPost() {
         </div>
       </div>
 
-      {/* Toggle Sidebar Button */}
+      {/* Toggle Sidebar Button (fixed so it stays visible while scrolling) */}
       <button
         onClick={() => setSidebarOpen(!sidebarOpen)}
-        className={`absolute top-1/2 -translate-y-1/2 border border-slate-700 p-1 md:p-2 bg-n-8 transition-all duration-300 text-slate-400 hover:text-white rounded-lg z-2 ${sidebarOpen ? 'left-[calc(7.7rem-12px)] md:left-[calc(16rem-12px)]' : '-left-3'}`}
+        className={`fixed top-1/2 -translate-y-1/2 border border-slate-700 p-1 md:p-2 bg-n-8 transition-all duration-300 text-slate-400 hover:text-white rounded-lg z-50 ${sidebarOpen ? 'left-[calc(7.7rem-12px)] md:left-[calc(16rem-12px)]' : '-left-3'}`}
       >
         <ChevronRight
           size={20}
